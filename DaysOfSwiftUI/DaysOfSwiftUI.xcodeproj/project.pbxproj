@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69C930582A30656200A22AAE /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C930572A30656200A22AAE /* Day3.swift */; };
 		69D153DC2A2D1F00002A1A46 /* DaysOfSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D153DB2A2D1F00002A1A46 /* DaysOfSwiftUIApp.swift */; };
 		69D153DE2A2D1F00002A1A46 /* DaysOfSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D153DD2A2D1F00002A1A46 /* DaysOfSwiftUIView.swift */; };
 		69D153E02A2D1F01002A1A46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69D153DF2A2D1F01002A1A46 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69C930572A30656200A22AAE /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
 		69D153D82A2D1F00002A1A46 /* DaysOfSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaysOfSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69D153DB2A2D1F00002A1A46 /* DaysOfSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfSwiftUIApp.swift; sourceTree = "<group>"; };
 		69D153DD2A2D1F00002A1A46 /* DaysOfSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfSwiftUIView.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				69D154062A2E330F002A1A46 /* Day1.swift */,
 				69D154482A2F2D08002A1A46 /* Day2.swift */,
+				69C930572A30656200A22AAE /* Day3.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69D153DE2A2D1F00002A1A46 /* DaysOfSwiftUIView.swift in Sources */,
+				69C930582A30656200A22AAE /* Day3.swift in Sources */,
 				69D154492A2F2D08002A1A46 /* Day2.swift in Sources */,
 				69D154072A2E330F002A1A46 /* Day1.swift in Sources */,
 				69D153DC2A2D1F00002A1A46 /* DaysOfSwiftUIApp.swift in Sources */,
