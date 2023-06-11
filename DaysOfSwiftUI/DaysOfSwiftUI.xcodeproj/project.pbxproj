@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		692117A52A3300930065B7C9 /* Day5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692117A42A3300930065B7C9 /* Day5.swift */; };
+		692117A72A3430390065B7C9 /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692117A62A3430390065B7C9 /* Day6.swift */; };
 		69C930582A30656200A22AAE /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C930572A30656200A22AAE /* Day3.swift */; };
 		69C9305A2A31A52700A22AAE /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C930592A31A52700A22AAE /* Day4.swift */; };
 		69D153DC2A2D1F00002A1A46 /* DaysOfSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D153DB2A2D1F00002A1A46 /* DaysOfSwiftUIApp.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		692117A42A3300930065B7C9 /* Day5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day5.swift; sourceTree = "<group>"; };
+		692117A62A3430390065B7C9 /* Day6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
 		69C930572A30656200A22AAE /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
 		69C930592A31A52700A22AAE /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
 		69D153D82A2D1F00002A1A46 /* DaysOfSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaysOfSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +148,7 @@
 				69C930572A30656200A22AAE /* Day3.swift */,
 				69C930592A31A52700A22AAE /* Day4.swift */,
 				692117A42A3300930065B7C9 /* Day5.swift */,
+				692117A62A3430390065B7C9 /* Day6.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69D153DE2A2D1F00002A1A46 /* DaysOfSwiftUIView.swift in Sources */,
+				692117A72A3430390065B7C9 /* Day6.swift in Sources */,
 				692117A52A3300930065B7C9 /* Day5.swift in Sources */,
 				69C9305A2A31A52700A22AAE /* Day4.swift in Sources */,
 				69C930582A30656200A22AAE /* Day3.swift in Sources */,
