@@ -1,10 +1,3 @@
-//
-//  CoverView.swift
-//  DaysOfSwiftUI
-//
-//  Created by Nick Theodoridis on 12/6/23.
-//
-
 import SwiftUI
 
 struct CoverView: View {

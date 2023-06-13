@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6914955C2A36EF4700969A2B /* CoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6914955B2A36EF4700969A2B /* CoverView.swift */; };
+		6914955E2A37357D00969A2B /* Day8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6914955D2A37357D00969A2B /* Day8.swift */; };
 		692117A52A3300930065B7C9 /* Day5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692117A42A3300930065B7C9 /* Day5.swift */; };
 		692117A72A3430390065B7C9 /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692117A62A3430390065B7C9 /* Day6.swift */; };
 		692117A92A35A0630065B7C9 /* Day7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692117A82A35A0630065B7C9 /* Day7.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		6914955B2A36EF4700969A2B /* CoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverView.swift; sourceTree = "<group>"; };
+		6914955D2A37357D00969A2B /* Day8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day8.swift; sourceTree = "<group>"; };
 		692117A42A3300930065B7C9 /* Day5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day5.swift; sourceTree = "<group>"; };
 		692117A62A3430390065B7C9 /* Day6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
 		692117A82A35A0630065B7C9 /* Day7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day7.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		69D154052A2E32F8002A1A46 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6914955B2A36EF4700969A2B /* CoverView.swift */,
 				69D154062A2E330F002A1A46 /* Day1.swift */,
 				69D154482A2F2D08002A1A46 /* Day2.swift */,
 				69C930572A30656200A22AAE /* Day3.swift */,
@@ -154,7 +157,7 @@
 				692117A42A3300930065B7C9 /* Day5.swift */,
 				692117A62A3430390065B7C9 /* Day6.swift */,
 				692117A82A35A0630065B7C9 /* Day7.swift */,
-				6914955B2A36EF4700969A2B /* CoverView.swift */,
+				6914955D2A37357D00969A2B /* Day8.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				692117A52A3300930065B7C9 /* Day5.swift in Sources */,
 				69C9305A2A31A52700A22AAE /* Day4.swift in Sources */,
 				69C930582A30656200A22AAE /* Day3.swift in Sources */,
+				6914955E2A37357D00969A2B /* Day8.swift in Sources */,
 				69D154492A2F2D08002A1A46 /* Day2.swift in Sources */,
 				6914955C2A36EF4700969A2B /* CoverView.swift in Sources */,
 				69D154072A2E330F002A1A46 /* Day1.swift in Sources */,
