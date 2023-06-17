@@ -6,7 +6,7 @@ import SwiftUI
 
 struct DaysOfSwiftUIView: View {
     var body: some View {
-        Day11()
+        Day12(name: "Upload Day 12",priority:.high)
     }
 }
 
