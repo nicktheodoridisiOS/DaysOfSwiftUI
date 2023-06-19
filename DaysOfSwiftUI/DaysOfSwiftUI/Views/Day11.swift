@@ -1,10 +1,5 @@
-//
-//  Day11.swift
-//  DaysOfSwiftUI
-//
-//  Created by Nick Theodoridis on 15/6/23.
-//
-
+//  Day10.swift
+//  16/6/23
 import SwiftUI
 
 struct Day11: View {
