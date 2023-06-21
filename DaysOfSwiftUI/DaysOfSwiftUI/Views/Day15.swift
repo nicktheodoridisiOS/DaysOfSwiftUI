@@ -1,9 +1,5 @@
-//
 //  Day15.swift
-//  DaysOfSwiftUI
-//
-//  Created by Nick Theodoridis on 19/6/23.
-//
+//  20/6/23
 
 import SwiftUI
 
@@ -37,21 +33,21 @@ struct Day15: View {
                     
                     HStack(spacing: 20){
                         VStack{
-                            Text("25")
+                            Text("31")
                                 .font(.system(size: 17,weight: .heavy,design: .default))
 
                             Text("Posts")
                                 .font(.system(size: 12,weight: .regular,design: .default))
                         }
                         VStack{
-                            Text("47")
+                            Text("52")
                                 .font(.system(size: 17,weight: .heavy,design: .default))
 
                             Text("Followers")
                                 .font(.system(size: 12,weight: .regular,design: .default))
                         }
                         VStack{
-                            Text("69")
+                            Text("70")
                                 .font(.system(size: 17,weight: .heavy,design: .default))
 
                             Text("Following")
