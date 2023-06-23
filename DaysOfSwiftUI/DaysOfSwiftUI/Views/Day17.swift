@@ -7,7 +7,7 @@ struct Day17: View {
     var body: some View {
 
             VStack{
-                Text("Today")
+                Text("Tasks")
                     .font(.system(size: 45,weight: .semibold , design: .default))
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity , alignment: .topLeading)
