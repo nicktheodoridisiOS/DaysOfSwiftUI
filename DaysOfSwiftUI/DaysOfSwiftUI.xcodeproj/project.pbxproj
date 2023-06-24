@@ -32,6 +32,7 @@
 		69DCD2EF2A420C3600CAF9FE /* Day16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DCD2EE2A420C3600CAF9FE /* Day16.swift */; };
 		69DCD2F12A42E71700CAF9FE /* Day17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DCD2F02A42E71700CAF9FE /* Day17.swift */; };
 		69DCD2FA2A446AEA00CAF9FE /* Day18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DCD2F92A446AEA00CAF9FE /* Day18.swift */; };
+		69DCD2FC2A45E2E900CAF9FE /* Day19.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DCD2FB2A45E2E900CAF9FE /* Day19.swift */; };
 		69FB204D2A39F9F0002BE8D2 /* Day10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FB204C2A39F9F0002BE8D2 /* Day10.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		69DCD2EE2A420C3600CAF9FE /* Day16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day16.swift; sourceTree = "<group>"; };
 		69DCD2F02A42E71700CAF9FE /* Day17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day17.swift; sourceTree = "<group>"; };
 		69DCD2F92A446AEA00CAF9FE /* Day18.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day18.swift; sourceTree = "<group>"; };
+		69DCD2FB2A45E2E900CAF9FE /* Day19.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day19.swift; sourceTree = "<group>"; };
 		69FB204C2A39F9F0002BE8D2 /* Day10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day10.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +190,7 @@
 				69DCD2EE2A420C3600CAF9FE /* Day16.swift */,
 				69DCD2F02A42E71700CAF9FE /* Day17.swift */,
 				69DCD2F92A446AEA00CAF9FE /* Day18.swift */,
+				69DCD2FB2A45E2E900CAF9FE /* Day19.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69DCD2FC2A45E2E900CAF9FE /* Day19.swift in Sources */,
 				69D153DE2A2D1F00002A1A46 /* DaysOfSwiftUIView.swift in Sources */,
 				69DCD2EF2A420C3600CAF9FE /* Day16.swift in Sources */,
 				692117A72A3430390065B7C9 /* Day6.swift in Sources */,
