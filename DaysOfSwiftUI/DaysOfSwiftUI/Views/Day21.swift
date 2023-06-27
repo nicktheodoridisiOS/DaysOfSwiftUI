@@ -1,9 +1,5 @@
-//
 //  Day21.swift
-//  DaysOfSwiftUI
-//
-//  Created by Nick Theodoridis on 25/6/23.
-//
+//  26/6/23
 
 import SwiftUI
 import MapKit
