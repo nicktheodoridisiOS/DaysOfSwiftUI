@@ -1,9 +1,5 @@
-//
 //  Day27.swift
-//  DaysOfSwiftUI
-//
-//  Created by Nick Theodoridis on 1/7/23.
-//
+//  2/7/23
 
 import SwiftUI
 
