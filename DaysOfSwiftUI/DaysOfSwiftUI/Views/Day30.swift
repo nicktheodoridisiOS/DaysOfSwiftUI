@@ -1,5 +1,6 @@
 //  Day30.swift
 //  5/7/23
+
 import SwiftUI
 
 struct Day30: View {
@@ -93,7 +94,7 @@ struct Day30: View {
                                         .bold()
                                         .frame(maxWidth: .infinity,alignment:.topLeading)
                                         .background(Color.gray.opacity(0.1).cornerRadius(10))
-                                        .foregroundColor(.white)
+                                        .foregroundColor(.primary)
                                         .font(.headline)
                                         .padding(.horizontal)
                                 }
