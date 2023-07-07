@@ -39,6 +39,7 @@
 		69D153F92A2D1F01002A1A46 /* DaysOfSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D153F82A2D1F01002A1A46 /* DaysOfSwiftUIUITestsLaunchTests.swift */; };
 		69D154072A2E330F002A1A46 /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D154062A2E330F002A1A46 /* Day1.swift */; };
 		69D154492A2F2D08002A1A46 /* Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D154482A2F2D08002A1A46 /* Day2.swift */; };
+		69DB88172A5739B500DF8E80 /* Day32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB88162A5739B500DF8E80 /* Day32.swift */; };
 		69DCD2EB2A40369600CAF9FE /* Day14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DCD2EA2A40369600CAF9FE /* Day14.swift */; };
 		69DCD2ED2A406E9000CAF9FE /* Day15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DCD2EC2A406E9000CAF9FE /* Day15.swift */; };
 		69DCD2EF2A420C3600CAF9FE /* Day16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DCD2EE2A420C3600CAF9FE /* Day16.swift */; };
@@ -101,6 +102,7 @@
 		69D153F82A2D1F01002A1A46 /* DaysOfSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		69D154062A2E330F002A1A46 /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
 		69D154482A2F2D08002A1A46 /* Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
+		69DB88162A5739B500DF8E80 /* Day32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day32.swift; sourceTree = "<group>"; };
 		69DCD2EA2A40369600CAF9FE /* Day14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day14.swift; sourceTree = "<group>"; };
 		69DCD2EC2A406E9000CAF9FE /* Day15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day15.swift; sourceTree = "<group>"; };
 		69DCD2EE2A420C3600CAF9FE /* Day16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day16.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				690E345A2A53152E003DB74A /* Day29.swift */,
 				697EBB912A548D310080174E /* Day30.swift */,
 				697EBB932A55D9BD0080174E /* Day31.swift */,
+				69DB88162A5739B500DF8E80 /* Day32.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69DCD2FC2A45E2E900CAF9FE /* Day19.swift in Sources */,
+				69DB88172A5739B500DF8E80 /* Day32.swift in Sources */,
 				697ACF972A518CB100A3CFCC /* Day28.swift in Sources */,
 				69557C802A5000F300D10D08 /* Day27.swift in Sources */,
 				69093A7C2A4C37CA00B6AEEC /* Day24.swift in Sources */,
