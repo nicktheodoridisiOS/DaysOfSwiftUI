@@ -15,6 +15,7 @@
 		692117A72A3430390065B7C9 /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692117A62A3430390065B7C9 /* Day6.swift */; };
 		692117A92A35A0630065B7C9 /* Day7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692117A82A35A0630065B7C9 /* Day7.swift */; };
 		692366992A46F61400CCF2FD /* Day20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692366982A46F61400CCF2FD /* Day20.swift */; };
+		693EDE7D2A5944CE007C5F57 /* Day34.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693EDE7C2A5944CE007C5F57 /* Day34.swift */; };
 		694377EB2A5884D0004BE937 /* Day33.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694377EA2A5884D0004BE937 /* Day33.swift */; };
 		69557C782A4D5ED200D10D08 /* Day25.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69557C772A4D5ED200D10D08 /* Day25.swift */; };
 		69557C7C2A4F2D5200D10D08 /* Day26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69557C7B2A4F2D5200D10D08 /* Day26.swift */; };
@@ -76,6 +77,7 @@
 		692117A62A3430390065B7C9 /* Day6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
 		692117A82A35A0630065B7C9 /* Day7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day7.swift; sourceTree = "<group>"; };
 		692366982A46F61400CCF2FD /* Day20.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day20.swift; sourceTree = "<group>"; };
+		693EDE7C2A5944CE007C5F57 /* Day34.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day34.swift; sourceTree = "<group>"; };
 		694377EA2A5884D0004BE937 /* Day33.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day33.swift; sourceTree = "<group>"; };
 		69557C772A4D5ED200D10D08 /* Day25.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day25.swift; sourceTree = "<group>"; };
 		69557C7B2A4F2D5200D10D08 /* Day26.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day26.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				697EBB932A55D9BD0080174E /* Day31.swift */,
 				69DB88162A5739B500DF8E80 /* Day32.swift */,
 				694377EA2A5884D0004BE937 /* Day33.swift */,
+				693EDE7C2A5944CE007C5F57 /* Day34.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69DCD2FC2A45E2E900CAF9FE /* Day19.swift in Sources */,
+				693EDE7D2A5944CE007C5F57 /* Day34.swift in Sources */,
 				69DB88172A5739B500DF8E80 /* Day32.swift in Sources */,
 				697ACF972A518CB100A3CFCC /* Day28.swift in Sources */,
 				69557C802A5000F300D10D08 /* Day27.swift in Sources */,
