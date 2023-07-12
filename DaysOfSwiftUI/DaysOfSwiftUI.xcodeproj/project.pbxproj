@@ -32,6 +32,7 @@
 		697EBB942A55D9BD0080174E /* Day31.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697EBB932A55D9BD0080174E /* Day31.swift */; };
 		6980AC042A3B1BC300182760 /* Day11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6980AC032A3B1BC300182760 /* Day11.swift */; };
 		69C7949A2A5C4E6300C52939 /* Day36.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C794992A5C4E6300C52939 /* Day36.swift */; };
+		69C7949C2A5DD60700C52939 /* Day37.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C7949B2A5DD60700C52939 /* Day37.swift */; };
 		69C930582A30656200A22AAE /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C930572A30656200A22AAE /* Day3.swift */; };
 		69C9305A2A31A52700A22AAE /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C930592A31A52700A22AAE /* Day4.swift */; };
 		69D153DC2A2D1F00002A1A46 /* DaysOfSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D153DB2A2D1F00002A1A46 /* DaysOfSwiftUIApp.swift */; };
@@ -96,6 +97,7 @@
 		697EBB932A55D9BD0080174E /* Day31.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day31.swift; sourceTree = "<group>"; };
 		6980AC032A3B1BC300182760 /* Day11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day11.swift; sourceTree = "<group>"; };
 		69C794992A5C4E6300C52939 /* Day36.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day36.swift; sourceTree = "<group>"; };
+		69C7949B2A5DD60700C52939 /* Day37.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day37.swift; sourceTree = "<group>"; };
 		69C930572A30656200A22AAE /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
 		69C930592A31A52700A22AAE /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
 		69D153D82A2D1F00002A1A46 /* DaysOfSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaysOfSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +244,7 @@
 				693EDE7C2A5944CE007C5F57 /* Day34.swift */,
 				693ADC0A2A5AB86400CCA773 /* Day35.swift */,
 				69C794992A5C4E6300C52939 /* Day36.swift */,
+				69C7949B2A5DD60700C52939 /* Day37.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				697ACF972A518CB100A3CFCC /* Day28.swift in Sources */,
 				69C7949A2A5C4E6300C52939 /* Day36.swift in Sources */,
 				69557C802A5000F300D10D08 /* Day27.swift in Sources */,
+				69C7949C2A5DD60700C52939 /* Day37.swift in Sources */,
 				69093A7C2A4C37CA00B6AEEC /* Day24.swift in Sources */,
 				69D153DE2A2D1F00002A1A46 /* DaysOfSwiftUIView.swift in Sources */,
 				69DCD2EF2A420C3600CAF9FE /* Day16.swift in Sources */,
