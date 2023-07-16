@@ -1,9 +1,5 @@
-//
 //  Day40.swift
-//  DaysOfSwiftUI
-//
-//  Created by Nick Theodoridis on 15/7/23.
-//
+//  15/7/23
 
 import SwiftUI
 
@@ -16,7 +12,7 @@ struct Day40: View {
     
     var body: some View {
         Image(systemName: isTapped ? "heart.fill" : "heart")
-            .foregroundColor(isTapped ? .accentColor : .primary)
+            .foregroundColor(isTapped ? .red : .primary)
             .scaleEffect(scaleAmount)
             .font(.title)
             .onTapGesture(count:2 ,perform: {
