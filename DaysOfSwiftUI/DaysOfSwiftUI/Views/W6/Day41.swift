@@ -15,6 +15,11 @@ class FollowerViewModel: ObservableObject{
     @Published var followers: [FollowerModel] = []
     @Published var isLoading:Bool  = false
     
+    
+    init(){
+        getFollowers()
+    }
+    
     func getFollowers(){
         let follower1 = FollowerModel(firstname: "Nick", lastname: "Theodoridis", username: "nicktheodoridisiOS",image: "profile")
         
@@ -66,9 +71,6 @@ struct Day41: View {
                     
                 }
             .navigationTitle("Followers")
-            .onAppear{
-                followerViewModel.getFollowers()
-            }
         }
     }
 }
