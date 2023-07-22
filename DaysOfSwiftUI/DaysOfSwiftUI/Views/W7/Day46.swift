@@ -1,9 +1,5 @@
-//
 //  Day46.swift
-//  DaysOfSwiftUI
-//
-//  Created by Nick Theodoridis on 20/7/23.
-//
+//  21/7/23
 
 import SwiftUI
 
