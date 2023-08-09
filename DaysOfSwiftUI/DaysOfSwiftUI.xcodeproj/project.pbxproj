@@ -12,6 +12,7 @@
 		690E345B2A53152E003DB74A /* Day29.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690E345A2A53152E003DB74A /* Day29.swift */; };
 		6911607D2A83B7C40088C378 /* Day64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6911607C2A83B7C40088C378 /* Day64.swift */; };
 		691160802A83B7EF0088C378 /* notification.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6911607F2A83B7EF0088C378 /* notification.mp3 */; };
+		691160822A83B8400088C378 /* Day65.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691160812A83B8400088C378 /* Day65.swift */; };
 		6914955C2A36EF4700969A2B /* CoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6914955B2A36EF4700969A2B /* CoverView.swift */; };
 		6914955E2A37357D00969A2B /* Day8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6914955D2A37357D00969A2B /* Day8.swift */; };
 		6918D4282A794B8B00007D80 /* Day57.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6918D4272A794B8B00007D80 /* Day57.swift */; };
@@ -105,6 +106,7 @@
 		690E345A2A53152E003DB74A /* Day29.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day29.swift; sourceTree = "<group>"; };
 		6911607C2A83B7C40088C378 /* Day64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day64.swift; sourceTree = "<group>"; };
 		6911607F2A83B7EF0088C378 /* notification.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = notification.mp3; sourceTree = "<group>"; };
+		691160812A83B8400088C378 /* Day65.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day65.swift; sourceTree = "<group>"; };
 		6914955B2A36EF4700969A2B /* CoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverView.swift; sourceTree = "<group>"; };
 		6914955D2A37357D00969A2B /* Day8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day8.swift; sourceTree = "<group>"; };
 		6918D4272A794B8B00007D80 /* Day57.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day57.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				6911607C2A83B7C40088C378 /* Day64.swift */,
+				691160812A83B8400088C378 /* Day65.swift */,
 			);
 			path = W10;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				697ACF972A518CB100A3CFCC /* Day28.swift in Sources */,
 				69C7949A2A5C4E6300C52939 /* Day36.swift in Sources */,
 				69557C802A5000F300D10D08 /* Day27.swift in Sources */,
+				691160822A83B8400088C378 /* Day65.swift in Sources */,
 				69C7949C2A5DD60700C52939 /* Day37.swift in Sources */,
 				693DB7C52A6FA1B7009EB64D /* Day51.swift in Sources */,
 				697112142A7F9A8E000BDDA6 /* Day63.swift in Sources */,
