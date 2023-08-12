@@ -1,72 +1,28 @@
-//  Day67.swift
-//  11/8/23
-
+//  Day68.swift
+//  12/8/23
 
 import SwiftUI
 
-struct VerifiedUser: Identifiable{
-    let id = UUID().uuidString
-    let name: String
-    let isVerified: Bool
-}
-
-class VeridiedUsersViewModel: ObservableObject{
-    @Published var verifiedUsers: [VerifiedUser] = []
-    @Published var sortedVerifiedUsers: [VerifiedUser] = []
-    @Published var filteredVerifiedUsers: [VerifiedUser] = []
-    
-    init(){
-        getUsers()
-        sortFilteredVerifyUsers()
-        filterFilteredVerifyUsers()
-    }
-    
-    func getUsers(){
-        let user1  = VerifiedUser(name: "mojombo",isVerified: true)
-        let user2  = VerifiedUser(name: "defunkt",isVerified: true)
-        let user3  = VerifiedUser(name: "pjhyett",isVerified: false)
-        let user4  = VerifiedUser(name: "wycats",isVerified: false)
-        let user5  = VerifiedUser(name: "ezmobius",isVerified: true)
-        let user6  = VerifiedUser(name: "ezmobius",isVerified: false)
-        let user7  = VerifiedUser(name: "evanphx",isVerified: true)
-        self.verifiedUsers.append(contentsOf: [user1,user2,user3,user4,user5,user6,user7])
-    }
-    
-    func sortFilteredVerifyUsers(){
-        sortedVerifiedUsers = verifiedUsers.sorted(by: {$0.name < $1.name})
-    }
-    
-    func filterFilteredVerifyUsers(){
-        filteredVerifiedUsers = verifiedUsers.filter({(user) -> Bool in
-            return user.isVerified
-        })
-    }
-    
-    
-}
-
-struct Day67: View {
+struct Day68: View {
     
     @StateObject var verifiedUsersViewModel =  VeridiedUsersViewModel()
     @State var searchText: String = ""
-    @State var isSorted: Bool = false
+    @State var isFiltered: Bool = false
     
     var body: some View {
         NavigationStack{
             ScrollView{
                 Button {
-        
-                  isSorted.toggle()
-                  
+                    isFiltered.toggle()
                 } label: {
-                    Text(isSorted ? "Sorted by Name" : "Sort by Name")
-                        .foregroundColor(isSorted ? .accentColor : .primary)
+                    Text(isFiltered ? "Verified" : "Non Verify")
+                        .foregroundColor(isFiltered ? .accentColor : .primary)
                 }.buttonStyle(.bordered)
                     .frame(maxWidth: .infinity , alignment:.topLeading)
                     .padding()
-
+                
                 VStack{
-                    if(!isSorted){
+                    if(!isFiltered){
                         ForEach(verifiedUsersViewModel.verifiedUsers){
                             user in
                             HStack(spacing: 20){
@@ -89,14 +45,11 @@ struct Day67: View {
                                 }.buttonStyle(.bordered)
                                 Image(systemName: "ellipsis")
                                     .font(.callout)
-                            
-                            
-
                             }
                         }
                     }
                     else{
-                        ForEach(verifiedUsersViewModel.sortedVerifiedUsers){
+                        ForEach(verifiedUsersViewModel.filteredVerifiedUsers){
                             user in
                             HStack(spacing: 20){
                                 Circle()
@@ -118,9 +71,9 @@ struct Day67: View {
                                 }.buttonStyle(.bordered)
                                 Image(systemName: "ellipsis")
                                     .font(.callout)
-                            
-                            
-
+                                
+                                
+                                
                             }
                         }
                     }
@@ -131,12 +84,13 @@ struct Day67: View {
             .searchable(text: $searchText,prompt: "Search")
             .navigationTitle("Following")
             .tint(.accentColor)
+            
         }
     }
     
-    struct Day67_Previews: PreviewProvider {
+    struct Day68_Previews: PreviewProvider {
         static var previews: some View {
-            Day67()
+            Day68()
         }
     }
 }
