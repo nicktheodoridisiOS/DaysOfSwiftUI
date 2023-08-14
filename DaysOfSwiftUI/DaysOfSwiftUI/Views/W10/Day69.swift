@@ -1,9 +1,5 @@
-//
 //  Day69.swift
-//  DaysOfSwiftUI
-//
-//  Created by Nick Theodoridis on 13/8/23.
-//
+//  13/8/23
 
 import SwiftUI
 
@@ -16,24 +12,24 @@ struct Day69: View {
         
         ZStack{
             TabView(selection: $count , content:  {
-                AppleLogoView(logoColor: .constant(.red))
+                AppleLogoView(logoColor: .red)
                     .tag(1)
-                AppleLogoView(logoColor: .constant(.blue))
+                AppleLogoView(logoColor: .blue)
                     .tag(2)
-                AppleLogoView(logoColor: .constant(.green))
+                AppleLogoView(logoColor: .green)
                     .tag(3)
-                AppleLogoView(logoColor: .constant(.orange))
+                AppleLogoView(logoColor: .orange)
                     .tag(4)
-                AppleLogoView(logoColor: .constant(.white))
+                AppleLogoView(logoColor: .white)
                     .tag(5)
             })
-            .frame(height: .infinity)
+            .frame(height: 800)
             .tabViewStyle(PageTabViewStyle())
             
         }
         .onReceive(timer, perform: { _ in
-            withAnimation(.spring()){
-                count = count == 5 ? 1 : count + 1
+            withAnimation(.default){
+                count = count == 5 ? 0 : count + 1
             }
             
         })
@@ -47,7 +43,7 @@ struct Day69_Previews: PreviewProvider {
 }
 
 struct AppleLogoView: View {
-    @Binding var logoColor: Color
+    let logoColor: Color
     @State  var scaleAmount: CGFloat = 0
     
     var body: some View {
