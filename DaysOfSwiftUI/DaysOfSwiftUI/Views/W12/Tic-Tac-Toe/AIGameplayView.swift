@@ -21,6 +21,8 @@ struct AIGameplayView: View {
     //Animation Stater
     @State private var gridScaleAmount: CGFloat = 0
     
+    @State private var alertItem: AlertItem?
+    
     var body: some View {
         GeometryReader{ geometry in
             VStack{
@@ -39,21 +41,22 @@ struct AIGameplayView: View {
                         .onTapGesture{
                             if(isSquareOccupied(in: moves, forIndex: i)) {return}
                             moves[i] = Move(player: .human, boardIndex: i)
-                            isGameBoardDisabled = true
-                            
                             
                             
                             // Win / Draw Condition
                             
                             if checkWinCondition(for: .human, in: moves){
-                                print(" You Win")
+                                alertItem = AlertContext.humanWin
                                 return
                             }
                             
                             if checkForDraw(in: moves){
-                                print("Draw")
+                                alertItem = AlertContext.draw
                                 return
                             }
+                            
+                            isGameBoardDisabled = true
+
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
                                 let aiPosition = determineMovePosition(in: moves)
@@ -61,12 +64,12 @@ struct AIGameplayView: View {
                                 isGameBoardDisabled = false
                                 
                                 if checkWinCondition(for: .ai, in: moves){
-                                    print("AI Win")
+                                    alertItem = AlertContext.aiWin
                                     return
                                 }
                                 
                                 if checkForDraw(in: moves){
-                                    print("Draw")
+                                    alertItem = AlertContext.draw
                                     return
                                 }
                                 
@@ -85,6 +88,11 @@ struct AIGameplayView: View {
             .disabled(isGameBoardDisabled)
             .padding()
             .padding(.horizontal,50)
+            .alert(item: $alertItem, content: { alertItem in
+                Alert(title: alertItem.title ,
+                      message: alertItem.message ,
+                      dismissButton: .default(alertItem.buttonTitle,action: {resetGame()}))
+            })
         }
     }
     
@@ -117,6 +125,10 @@ struct AIGameplayView: View {
     
     func checkForDraw(in moves: [Move?]) -> Bool {
         return moves.compactMap{$0}.count == 9
+    }
+    
+    func resetGame(){
+        moves = Array(repeating: nil, count: 9)
     }
     
     
