@@ -100,7 +100,46 @@ struct AIGameplayView: View {
         return moves.contains(where: {$0?.boardIndex == index})
     }
     
+    
     func determineMovePosition(in moves: [Move?]) -> Int{
+        let winPatterns: Set<Set<Int>> = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
+        
+       
+        //Easy Mode
+        let aiMoves = moves.compactMap{$0}.filter{ $0.player == .ai} // Removing nil from array and keep the player's move array's index
+        let aiPosition = Set(aiMoves.map{$0.boardIndex}) // Give me the board indexed from player's array
+        
+        for pattern in winPatterns {
+            let  winPosition = pattern.subtracting(aiPosition)
+            
+            if winPosition.count == 1 {
+                let isAvailable = !isSquareOccupied(in: moves, forIndex: winPosition.first!)
+                if isAvailable {return winPosition.first!}
+            }
+        }
+        
+        //Medium Mode
+        let humanMoves = moves.compactMap{$0}.filter{ $0.player == .human} // Removing nil from array and keep the player's move array's index
+        let humanPosition = Set(humanMoves.map{$0.boardIndex}) // Give me the board indexed from player's array
+        
+        for pattern in winPatterns {
+            let  winPosition = pattern.subtracting(humanPosition)
+            
+            if winPosition.count == 1 {
+                let isAvailable = !isSquareOccupied(in: moves, forIndex: winPosition.first!)
+                if isAvailable {return winPosition.first!}
+            }
+        }
+        
+        //Hard Mode
+        let centerSquare = 4
+        if !isSquareOccupied(in: moves, forIndex: centerSquare){
+            return centerSquare
+        }
+        
+    
+        
+        
         var movePosition = Int.random(in: 0..<9)
         
         while isSquareOccupied(in: moves, forIndex: movePosition){
