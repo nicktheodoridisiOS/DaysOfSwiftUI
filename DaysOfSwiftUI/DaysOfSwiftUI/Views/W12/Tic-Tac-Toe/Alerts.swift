@@ -27,4 +27,17 @@ struct AlertContext{
     static let draw = AlertItem(title:Text("It's a Draw"),
                              message: Text("The game ended in a draw. 🤝 A well-fought match!"),
                              buttonTitle: Text("Play Again"))
+    
+    static let humanRound = AlertItem(title:Text("Round For You"),
+                             message: Text(""),
+                             buttonTitle: Text("Next Round"))
+    
+    static let aiRound = AlertItem(title:Text("Round For AI"),
+                             message: Text(""),
+                             buttonTitle: Text("Next Round"))
+    
+    static let drawRound = AlertItem(title:Text("Draw"),
+                             message: Text(""),
+                             buttonTitle: Text("Next Round"))
+    
 }

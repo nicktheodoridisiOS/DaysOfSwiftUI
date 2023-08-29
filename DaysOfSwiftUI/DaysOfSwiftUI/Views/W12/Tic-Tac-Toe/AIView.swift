@@ -12,7 +12,7 @@ struct AIView: View {
         NavigationStack{
             ScrollView(showsIndicators: false){
                 VStack(spacing: 30){
-                    Image("AICover")
+                    Image("aicover")
                         .resizable()
                         .scaledToFit()
                     VStack(alignment: .leading, spacing: 5){
