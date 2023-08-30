@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct AIView: View {
+    
+    @Binding var aiTfName: String
+    @Binding var roundSelectedOption: Int
+    
     var body: some View {
         NavigationStack{
             ScrollView(showsIndicators: false){
@@ -26,7 +30,7 @@ struct AIView: View {
                     .padding(.horizontal,30)
                     
                     Spacer()
-                    NavigationLink(destination: AIGameplayView(), label: {
+                    NavigationLink(destination: AIGameplayView(aiTfName: $aiTfName,roundSelectedOption: $roundSelectedOption), label: {
                         HStack{
                             Image(systemName: "poweroutlet.type.f.fill")
                             Text("Play With AI")
@@ -53,6 +57,6 @@ struct AIView: View {
 
 struct AIView_Previews: PreviewProvider {
     static var previews: some View {
-        AIView()
+        AIView(aiTfName: .constant(""),roundSelectedOption: .constant(0))
     }
 }

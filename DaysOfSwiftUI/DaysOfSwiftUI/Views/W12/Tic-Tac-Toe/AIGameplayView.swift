@@ -25,11 +25,13 @@ struct AIGameplayView: View {
     @State private var gridScaleAmount: CGFloat = 0
     
     @State private var alertItem: AlertItem?
-    
-    @State private var totalRounds = 5
+
     @State private var currentRound = 0
     @State private var humanScore = 0
     @State private var aiScore = 0
+    
+    @Binding var aiTfName: String
+    @Binding var roundSelectedOption: Int
     
     
     
@@ -50,9 +52,11 @@ struct AIGameplayView: View {
                                             Image(systemName: "person.fill")
                                                 .font(.largeTitle)
                                                 .foregroundColor(humanTurn ? .accentColor : .gray.opacity(0.1))
-                                            Text("You")
+                                            Text(aiTfName)
+                                                .truncationMode(.tail)
                                                 .fontWeight(.semibold)
                                                 .foregroundColor(humanTurn ? .accentColor : .gray.opacity(0.1))
+                                                .padding(.horizontal)
                                         }
                                     }
                             }
@@ -61,16 +65,16 @@ struct AIGameplayView: View {
                         Text("\(humanScore) : \(aiScore)")
                             .fontWeight(.semibold)
                             .font(.largeTitle)
-                        Text(currentRound == 4 ? "Last Round":"Round \(currentRound+1)")
-                            .foregroundColor(currentRound == 4 ? .red.opacity(0.5) : .secondary.opacity(0.5))
-                            .font(.system(size: currentRound == 4 ? 8 : 11))
+                        Text(currentRound == roundSelectedOption ? "Last Round":"Round \(currentRound + 1)")
+                            .foregroundColor(currentRound == roundSelectedOption ? .red.opacity(0.5) : .secondary.opacity(0.5))
+                            .font(.system(size: currentRound == roundSelectedOption ? 8 : 11))
                             .background{
                                 RoundedRectangle(cornerRadius: 5)
-                                    .foregroundColor(currentRound == 4 ? .red.opacity(0.2) : .secondary.opacity(0.2))
+                                    .foregroundColor(currentRound == roundSelectedOption ? .red.opacity(0.2) : .secondary.opacity(0.2))
                                     .frame(width: 55,height:20)
                                     .overlay{
                                         RoundedRectangle(cornerRadius: 5)
-                                            .stroke(currentRound == 4 ? .red.opacity(0.5) : .secondary.opacity(0.5))
+                                            .stroke(currentRound == roundSelectedOption ? .red.opacity(0.5) : .secondary.opacity(0.5))
                                             .frame(width: 55,height:20)
                                     }
                             }
@@ -118,51 +122,57 @@ struct AIGameplayView: View {
                             if(isSquareOccupied(in: moves, forIndex: i)) {return}
                             moves[i] = Move(player: .human, boardIndex: i)
                             
-                            print(currentRound)
+                            print("\(currentRound) of \(roundSelectedOption)")
                             print(humanScore)
                             print(aiScore)
                             
                             // Win / Draw Condition
                             
                             if checkWinCondition(for: .human, in: moves){
-                                humanScore = humanScore + 1
-                                currentRound = currentRound + 1
-                                alertItem = AlertContext.humanRound
-                                if(totalRounds == currentRound){
+                                if(roundSelectedOption == currentRound){
                                     if(humanScore > aiScore){
                                         alertItem = AlertContext.humanWin
                                         resetScore()
+                                        return
                                     }
                                     else if(humanScore < aiScore){
                                         alertItem = AlertContext.aiWin
                                         resetScore()
+                                        return
                                     }
                                     else{
                                         alertItem = AlertContext.draw
                                         resetScore()
+                                        return
                                     }
                                 }
+                                humanScore = humanScore + 1
+                                currentRound = currentRound + 1
+                                alertItem = AlertContext.humanRound
                                 return
                             }
                             
                             
                             if checkForDraw(in: moves){
-                                currentRound = currentRound + 1
-                                alertItem = AlertContext.drawRound
-                                if(totalRounds == currentRound){
+                                if(roundSelectedOption == currentRound){
                                     if(humanScore > aiScore){
                                         alertItem = AlertContext.humanWin
                                         resetScore()
+                                        return
                                     }
                                     else if(humanScore < aiScore){
                                         alertItem = AlertContext.aiWin
                                         resetScore()
+                                        return
                                     }
                                     else{
                                         alertItem = AlertContext.draw
                                         resetScore()
+                                        return
                                     }
                                 }
+                                currentRound = currentRound + 1
+                                alertItem = AlertContext.drawRound
                                 return
                             }
                             
@@ -176,23 +186,27 @@ struct AIGameplayView: View {
                                 
                                 
                                 if checkWinCondition(for: .ai, in: moves){
-                                    aiScore = aiScore + 1
-                                    currentRound = currentRound + 1
-                                    alertItem = AlertContext.aiRound
-                                    if(totalRounds == currentRound){
+                                    
+                                    if(roundSelectedOption == currentRound){
                                         if(humanScore > aiScore){
                                             alertItem = AlertContext.humanWin
                                             resetScore()
+                                            return
                                         }
                                         else if(humanScore < aiScore){
                                             alertItem = AlertContext.aiWin
                                             resetScore()
+                                            return
                                         }
                                         else{
                                             alertItem = AlertContext.draw
                                             resetScore()
+                                            return
                                         }
                                     }
+                                    aiScore = aiScore + 1
+                                    currentRound = currentRound + 1
+                                    alertItem = AlertContext.aiRound
                                     return
                                     
                                     
@@ -381,6 +395,6 @@ struct YIndicator: View{
 
 struct AIGameplayView_Previews: PreviewProvider {
     static var previews: some View {
-        AIGameplayView()
+        AIGameplayView(aiTfName: .constant(""),roundSelectedOption: .constant(0))
     }
 }

@@ -7,14 +7,52 @@
 
 import SwiftUI
 
+
 struct SettingsView: View {
+    
+    @Binding var aiTfName: String
+    @Binding var roundSelectedOption: Int
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            VStack{
+                Form{
+                    Section(header: Text("PERSONAL DETAILS")){
+                        HStack{
+                            Image(systemName: "person.fill")
+                                .foregroundColor(.accentColor)
+                                .fontWeight(.semibold)
+                            Text("First Player")
+                                .fontWeight(.semibold)
+                                .foregroundColor(.accentColor)
+                            
+                            TextField(aiTfName,text: $aiTfName)
+                        }
+                    }
+                    
+                    Section(header: Text("GAME DETAILS")){
+                        HStack{
+                            Image(systemName: "poweroutlet.type.f.fill")
+                                .foregroundColor(.yellow)
+                                .fontWeight(.semibold)
+                            Picker("AI Rounds", selection: $roundSelectedOption) {
+                                ForEach(1..<11) { round in
+                                    Text("\(round)")
+                                }
+                            }
+                        }
+                    }
+                    
+                    
+                }.navigationTitle("Settings")
+            }
+        }
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(aiTfName: .constant(""),roundSelectedOption: .constant(0))
     }
 }
