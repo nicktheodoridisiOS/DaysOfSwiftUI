@@ -13,6 +13,7 @@ struct SettingsView: View {
     @Binding var aiTfName: String
     @Binding var roundSelectedOption: Int
     
+    @AppStorage("isDarkModeEnabled") private var isDarkModeEnabled = false
     
     var body: some View {
         NavigationStack{
@@ -41,6 +42,13 @@ struct SettingsView: View {
                                     Text("\(round)")
                                 }
                             }
+                        }
+                    }
+                    
+                    Section(header: Text("APPEARANCE")){
+                        HStack{
+                            Image(systemName: "moon.fill")
+                            Toggle("Dark Mode" , isOn: $isDarkModeEnabled)
                         }
                     }
                     

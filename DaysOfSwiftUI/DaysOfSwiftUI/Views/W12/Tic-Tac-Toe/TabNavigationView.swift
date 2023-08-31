@@ -11,6 +11,7 @@ struct TabNavigationView: View {
     
     @AppStorage("aiTfName") private var aiTfName = "You"
     @AppStorage("roundSelectedOption") private var roundSelectedOption = 0
+    @AppStorage("isDarkModeEnabled") private var isDarkModeEnabled = false
     
     var body: some View {
         TabView{
@@ -36,6 +37,7 @@ struct TabNavigationView: View {
                 }
         }
         .tint(.accentColor)
+        .environment(\.colorScheme, isDarkModeEnabled ? .dark : .light)
     }
 }
 
