@@ -18,25 +18,32 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack{
             VStack{
-                Form{
-                    Section(header: Text("PERSONAL DETAILS")){
+                List{
+                    Section(header: Text("PREFERENCES")){
                         HStack{
-                            Image(systemName: "person.fill")
-                                .foregroundColor(.accentColor)
-                                .fontWeight(.semibold)
-                            Text("First Player")
-                                .fontWeight(.semibold)
-                                .foregroundColor(.accentColor)
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 7)
+                                    .frame(width: 30,height: 30)
+                                    .foregroundColor(.accentColor)
+                                Image(systemName: "person.fill")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                            }
                             
                             TextField(aiTfName,text: $aiTfName)
                         }
                     }
                     
-                    Section(header: Text("GAME DETAILS")){
+                    Section(header: Text("GAMEPLAY")){
                         HStack{
-                            Image(systemName: "poweroutlet.type.f.fill")
-                                .foregroundColor(.yellow)
-                                .fontWeight(.semibold)
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 7)
+                                    .frame(width: 30,height: 30)
+                                    .foregroundColor(.yellow)
+                                Image(systemName: "poweroutlet.type.f.fill")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                            }
                             Picker("AI Rounds", selection: $roundSelectedOption) {
                                 ForEach(1..<11) { round in
                                     Text("\(round)")
@@ -45,15 +52,24 @@ struct SettingsView: View {
                         }
                     }
                     
-                    Section(header: Text("APPEARANCE")){
+                    Section(header: Text("DISPLAY"),footer: Text("Enabling dark mode is going to change the entire appearance of the application, beyond your device's general settings. ")){
                         HStack{
-                            Image(systemName: "moon.fill")
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 7)
+                                    .frame(width: 30,height: 30)
+                                    .foregroundColor(.purple)
+                                Image(systemName: "moon.fill")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                            }
                             Toggle("Dark Mode" , isOn: $isDarkModeEnabled)
                         }
                     }
                     
                     
-                }.navigationTitle("Settings")
+                }
+                .navigationTitle("Settings")
+                .listStyle(.insetGrouped)
             }
         }
     }
