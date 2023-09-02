@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct FriendView: View {
+struct MultiplayerView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct FriendView_Previews: PreviewProvider {
+struct MultiplayerView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendView()
+        MultiplayerView()
     }
 }

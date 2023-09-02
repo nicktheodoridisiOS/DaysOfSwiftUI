@@ -25,7 +25,7 @@ struct TabNavigationView: View {
                     Image(systemName: "poweroutlet.type.f.fill")
                     Text("AI")
                 }
-            FriendView()
+            MultiplayerView()
                 .tabItem(){
                     Image(systemName: "person.2.fill")
                     Text("Multiplayer")

@@ -32,7 +32,7 @@
 		692A88BA2A969C4C00124E19 /* AIGameplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692A88B92A969C4C00124E19 /* AIGameplayView.swift */; };
 		692EF49D2A93F92200C3A4C0 /* TabNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692EF49C2A93F92200C3A4C0 /* TabNavigationView.swift */; };
 		692EF49F2A93F9AE00C3A4C0 /* AIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692EF49E2A93F9AE00C3A4C0 /* AIView.swift */; };
-		692EF4A12A93F9BF00C3A4C0 /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692EF4A02A93F9BF00C3A4C0 /* FriendView.swift */; };
+		692EF4A12A93F9BF00C3A4C0 /* MultiplayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692EF4A02A93F9BF00C3A4C0 /* MultiplayerView.swift */; };
 		692EF4A32A93FA0C00C3A4C0 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692EF4A22A93FA0C00C3A4C0 /* DiscoverView.swift */; };
 		692EF4A52A93FA3A00C3A4C0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692EF4A42A93FA3A00C3A4C0 /* SettingsView.swift */; };
 		693ADC0B2A5AB86400CCA773 /* Day35.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693ADC0A2A5AB86400CCA773 /* Day35.swift */; };
@@ -41,6 +41,10 @@
 		693EDE7D2A5944CE007C5F57 /* Day34.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693EDE7C2A5944CE007C5F57 /* Day34.swift */; };
 		694323C72A922FB700C0313C /* Day76.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694323C62A922FB700C0313C /* Day76.swift */; };
 		694377EB2A5884D0004BE937 /* Day33.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694377EA2A5884D0004BE937 /* Day33.swift */; };
+		694549D32AA229C400680365 /* AIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694549D22AA229C400680365 /* AIViewModel.swift */; };
+		694549D62AA22EC300680365 /* XIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694549D52AA22EC300680365 /* XIndicatorView.swift */; };
+		694549D82AA22ED300680365 /* YIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694549D72AA22ED300680365 /* YIndicatorView.swift */; };
+		694549DD2AA22F6200680365 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694549DC2AA22F6200680365 /* Move.swift */; };
 		69557C782A4D5ED200D10D08 /* Day25.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69557C772A4D5ED200D10D08 /* Day25.swift */; };
 		69557C7C2A4F2D5200D10D08 /* Day26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69557C7B2A4F2D5200D10D08 /* Day26.swift */; };
 		69557C802A5000F300D10D08 /* Day27.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69557C7F2A5000F300D10D08 /* Day27.swift */; };
@@ -145,7 +149,7 @@
 		692A88B92A969C4C00124E19 /* AIGameplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIGameplayView.swift; sourceTree = "<group>"; };
 		692EF49C2A93F92200C3A4C0 /* TabNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationView.swift; sourceTree = "<group>"; };
 		692EF49E2A93F9AE00C3A4C0 /* AIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIView.swift; sourceTree = "<group>"; };
-		692EF4A02A93F9BF00C3A4C0 /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
+		692EF4A02A93F9BF00C3A4C0 /* MultiplayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerView.swift; sourceTree = "<group>"; };
 		692EF4A22A93FA0C00C3A4C0 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		692EF4A42A93FA3A00C3A4C0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		693ADC0A2A5AB86400CCA773 /* Day35.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day35.swift; sourceTree = "<group>"; };
@@ -154,6 +158,10 @@
 		693EDE7C2A5944CE007C5F57 /* Day34.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day34.swift; sourceTree = "<group>"; };
 		694323C62A922FB700C0313C /* Day76.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day76.swift; sourceTree = "<group>"; };
 		694377EA2A5884D0004BE937 /* Day33.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day33.swift; sourceTree = "<group>"; };
+		694549D22AA229C400680365 /* AIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewModel.swift; sourceTree = "<group>"; };
+		694549D52AA22EC300680365 /* XIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIndicatorView.swift; sourceTree = "<group>"; };
+		694549D72AA22ED300680365 /* YIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YIndicatorView.swift; sourceTree = "<group>"; };
+		694549DC2AA22F6200680365 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		69557C772A4D5ED200D10D08 /* Day25.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day25.swift; sourceTree = "<group>"; };
 		69557C7B2A4F2D5200D10D08 /* Day26.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day26.swift; sourceTree = "<group>"; };
 		69557C7F2A5000F300D10D08 /* Day27.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day27.swift; sourceTree = "<group>"; };
@@ -375,13 +383,9 @@
 		692EF4992A93DCD900C3A4C0 /* Tic-Tac-Toe */ = {
 			isa = PBXGroup;
 			children = (
-				692EF49C2A93F92200C3A4C0 /* TabNavigationView.swift */,
-				692EF49E2A93F9AE00C3A4C0 /* AIView.swift */,
-				692EF4A02A93F9BF00C3A4C0 /* FriendView.swift */,
-				692EF4A22A93FA0C00C3A4C0 /* DiscoverView.swift */,
-				692EF4A42A93FA3A00C3A4C0 /* SettingsView.swift */,
-				692A88B92A969C4C00124E19 /* AIGameplayView.swift */,
-				69ABD59C2A9B31E8006EF98F /* Alerts.swift */,
+				694549DB2AA22F3700680365 /* Model */,
+				694549D42AA22EB100680365 /* View */,
+				694549D12AA229B300680365 /* ViewModel */,
 			);
 			path = "Tic-Tac-Toe";
 			sourceTree = "<group>";
@@ -398,6 +402,62 @@
 				69A77B532A76738B00C59F9F /* Day56.swift */,
 			);
 			path = W8;
+			sourceTree = "<group>";
+		};
+		694549D12AA229B300680365 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				694549D22AA229C400680365 /* AIViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		694549D42AA22EB100680365 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				692EF49C2A93F92200C3A4C0 /* TabNavigationView.swift */,
+				694549DE2AA22FE900680365 /* Gameplay */,
+				694549DA2AA22F0E00680365 /* Tabs */,
+				694549D92AA22F0100680365 /* Indicators */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		694549D92AA22F0100680365 /* Indicators */ = {
+			isa = PBXGroup;
+			children = (
+				694549D52AA22EC300680365 /* XIndicatorView.swift */,
+				694549D72AA22ED300680365 /* YIndicatorView.swift */,
+			);
+			path = Indicators;
+			sourceTree = "<group>";
+		};
+		694549DA2AA22F0E00680365 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				692EF49E2A93F9AE00C3A4C0 /* AIView.swift */,
+				692EF4A02A93F9BF00C3A4C0 /* MultiplayerView.swift */,
+				692EF4A22A93FA0C00C3A4C0 /* DiscoverView.swift */,
+				692EF4A42A93FA3A00C3A4C0 /* SettingsView.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		694549DB2AA22F3700680365 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				69ABD59C2A9B31E8006EF98F /* Alerts.swift */,
+				694549DC2AA22F6200680365 /* Move.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		694549DE2AA22FE900680365 /* Gameplay */ = {
+			isa = PBXGroup;
+			children = (
+				692A88B92A969C4C00124E19 /* AIGameplayView.swift */,
+			);
+			path = Gameplay;
 			sourceTree = "<group>";
 		};
 		69671F0C2A66599300C98D93 /* W7 */ = {
@@ -659,6 +719,7 @@
 				693DB7C52A6FA1B7009EB64D /* Day51.swift in Sources */,
 				6979AD312A8A55F4002A411F /* Day70.swift in Sources */,
 				697112142A7F9A8E000BDDA6 /* Day63.swift in Sources */,
+				694549DD2AA22F6200680365 /* Move.swift in Sources */,
 				695A32042A72D10300A9F682 /* Day53.swift in Sources */,
 				69093A7C2A4C37CA00B6AEEC /* Day24.swift in Sources */,
 				69D153DE2A2D1F00002A1A46 /* DaysOfSwiftUIView.swift in Sources */,
@@ -710,8 +771,11 @@
 				692A88BA2A969C4C00124E19 /* AIGameplayView.swift in Sources */,
 				6924A0EE2A9283FE001F128A /* Day77.swift in Sources */,
 				697EBB942A55D9BD0080174E /* Day31.swift in Sources */,
+				694549D62AA22EC300680365 /* XIndicatorView.swift in Sources */,
+				694549D32AA229C400680365 /* AIViewModel.swift in Sources */,
+				694549D82AA22ED300680365 /* YIndicatorView.swift in Sources */,
 				69DCD2F12A42E71700CAF9FE /* Day17.swift in Sources */,
-				692EF4A12A93F9BF00C3A4C0 /* FriendView.swift in Sources */,
+				692EF4A12A93F9BF00C3A4C0 /* MultiplayerView.swift in Sources */,
 				69D154072A2E330F002A1A46 /* Day1.swift in Sources */,
 				69A77B542A76738B00C59F9F /* Day56.swift in Sources */,
 				69671F0E2A6659C500C98D93 /* Day43.swift in Sources */,
