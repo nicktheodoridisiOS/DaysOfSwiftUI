@@ -25,10 +25,10 @@ struct TabNavigationView: View {
                     Image(systemName: "poweroutlet.type.f.fill")
                     Text("AI")
                 }
-            MultiplayerView()
+            AgainstMode()
                 .tabItem(){
                     Image(systemName: "person.2.fill")
-                    Text("Multiplayer")
+                    Text("Against")
                 }
             SettingsView(aiTfName: $aiTfName , roundSelectedOption: $roundSelectedOption)
                 .tabItem(){

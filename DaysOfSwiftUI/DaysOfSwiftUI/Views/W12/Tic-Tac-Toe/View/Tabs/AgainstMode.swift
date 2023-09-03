@@ -1,5 +1,5 @@
 //
-//  AIView.swift
+//  FriendView.swift
 //  DaysOfSwiftUI
 //
 //  Created by Nick Theodoridis on 21/8/23.
@@ -7,36 +7,32 @@
 
 import SwiftUI
 
-struct AIView: View {
-    
-    @Binding var aiTfName: String
-    @Binding var roundSelectedOption: Int
-    
+struct AgainstMode: View {
     var body: some View {
         NavigationStack{
             ScrollView(showsIndicators: false){
                 VStack(spacing: 30){
-                    Image("aicover")
+                    Image("mpcover")
                         .resizable()
                         .scaledToFit()
                         .padding(.horizontal)
                         .padding(.top)
                     VStack(alignment: .leading, spacing: 5){
-                        Text("ABOUT AI MODE")
+                        Text("ABOUT AGAINST MODE")
                             .font(.headline)
                             .fontWeight(.semibold)
-                            .foregroundColor(.yellow)
-                        Text("Artificial Intelligence (AI) is a field of computer science that deals with the design and development of systems capable of performing tasks that require human intelligence. The AI of this application (Tic Tac Toe) has been programmed to face any human intelligence. Are you capable of facing it?")
+                            .foregroundColor(.red)
+                        Text("Get ready for the continuous suspense and thrill of the waiting as you enter the world of Tic-Tac-Toe.Have fun and good luck in conquering Tic-Tac-Toe before your friend!")
                             .font(.system(size: 17))
                     }
                     .frame(maxWidth: .infinity,alignment:.topLeading)
                     .padding(.horizontal)
                     
                     Spacer()
-                    NavigationLink(destination: AIGameplayView(aiTfName: $aiTfName,roundSelectedOption: $roundSelectedOption), label: {
+                    NavigationLink(destination: AgainstGameplayView(), label: {
                         HStack{
-                            Image(systemName: "poweroutlet.type.f.fill")
-                            Text("Play Against AI")
+                            Image(systemName: "person.2.fill")
+                            Text("Play Against")
                                 
                                 
                         }
@@ -44,22 +40,21 @@ struct AIView: View {
                         
                     })
                     .buttonStyle(.bordered)
-                    .tint(.yellow)
+                    .tint(.red)
                     
                     
                 }
                 
             }
-            .navigationTitle("AI Mode")
+            .navigationTitle("Against Mode")
             
         }
         
     }
 }
 
-
-struct AIView_Previews: PreviewProvider {
+struct MultiplayerView_Previews: PreviewProvider {
     static var previews: some View {
-        AIView(aiTfName: .constant(""),roundSelectedOption: .constant(0))
+        AgainstMode()
     }
 }

@@ -20,13 +20,15 @@ struct DiscoverView: View {
                         Text("WHAT IS TIC TAC TOE")
                             .font(.headline)
                             .fontWeight(.semibold)
-                        Text("Tic-tac-toe, also known as noughts and crosses, is a strategy game typically played by two players taking turns to place their symbols (usually 'X' or 'O') on a 3x3 grid.")
+                            .foregroundColor(.accentColor)
+                        Text("Tic-Tac-Toe, also known as noughts and crosses, is a strategy game typically played by two players taking turns to place their symbols (usually 'X' or 'O') on a 3x3 grid.")
                             .font(.system(size: 17))
                     }
                     .frame(maxWidth: .infinity,alignment:.topLeading)
                     .padding(.horizontal,30)
                     VStack(alignment: .leading, spacing: 5){
                         Text("RULES")
+                            .foregroundColor(.accentColor)
                             .font(.headline)
                             .fontWeight(.semibold)
                         HStack(alignment:.top){
@@ -69,14 +71,14 @@ struct DiscoverView: View {
                                 Image("ai")
                                     .resizable()
                                     .scaledToFit()
-                                Text("Play With AI")
+                                Text("AI Mode")
                                     .font(.system(size: 12,weight: .semibold))
                             }
                             VStack(spacing: 10){
                                 Image("multiplayer")
                                     .resizable()
                                     .scaledToFit()
-                                Text("Multiplayer")
+                                Text("Against Mode")
                                     .font(.system(size: 12,weight: .semibold))
                             }
                             VStack(spacing: 10){
