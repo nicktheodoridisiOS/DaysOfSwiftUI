@@ -10,7 +10,7 @@ import SwiftUI
 
 
 enum Player{
-    case human ,ai
+    case firstPlayer,secondPlayer ,ai
 }
 
 struct Move{
@@ -18,9 +18,16 @@ struct Move{
     let boardIndex: Int
     
     var indicator: some View{
-        return player == .human
-        ? AnyView(XIndicatorView())
-        : AnyView(YIndicatorView())
+        if(player == .firstPlayer){
+            return AnyView(XIndicatorView())
+        }
+        else if(player == .secondPlayer){
+            return AnyView(AOIndicatorView())
+        }
+        else{
+            return AnyView(AIOIndicatorView())
+        }
+        
         
     }
 }

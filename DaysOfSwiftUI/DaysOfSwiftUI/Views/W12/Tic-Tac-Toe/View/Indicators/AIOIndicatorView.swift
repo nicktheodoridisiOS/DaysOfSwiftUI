@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct YIndicatorView: View {
+struct AIOIndicatorView: View {
     //Animation Stater
     @State private var indicatorScaleAmount: CGFloat = 0
     
@@ -31,8 +31,8 @@ struct YIndicatorView: View {
     }
 }
 
-struct YIndicatorView_Previews: PreviewProvider {
+struct AIOIndicatorView_Previews: PreviewProvider {
     static var previews: some View {
-        YIndicatorView()
+        AIOIndicatorView()
     }
 }

@@ -43,9 +43,11 @@
 		694377EB2A5884D0004BE937 /* Day33.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694377EA2A5884D0004BE937 /* Day33.swift */; };
 		694549D32AA229C400680365 /* AIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694549D22AA229C400680365 /* AIViewModel.swift */; };
 		694549D62AA22EC300680365 /* XIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694549D52AA22EC300680365 /* XIndicatorView.swift */; };
-		694549D82AA22ED300680365 /* YIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694549D72AA22ED300680365 /* YIndicatorView.swift */; };
+		694549D82AA22ED300680365 /* AIOIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694549D72AA22ED300680365 /* AIOIndicatorView.swift */; };
 		694549DD2AA22F6200680365 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694549DC2AA22F6200680365 /* Move.swift */; };
 		694549E02AA4A70D00680365 /* AgainstGameplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694549DF2AA4A70D00680365 /* AgainstGameplayView.swift */; };
+		694549E22AA5E56000680365 /* AgainstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694549E12AA5E56000680365 /* AgainstViewModel.swift */; };
+		694549E42AA5E88800680365 /* AOIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694549E32AA5E88800680365 /* AOIndicatorView.swift */; };
 		69557C782A4D5ED200D10D08 /* Day25.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69557C772A4D5ED200D10D08 /* Day25.swift */; };
 		69557C7C2A4F2D5200D10D08 /* Day26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69557C7B2A4F2D5200D10D08 /* Day26.swift */; };
 		69557C802A5000F300D10D08 /* Day27.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69557C7F2A5000F300D10D08 /* Day27.swift */; };
@@ -161,9 +163,11 @@
 		694377EA2A5884D0004BE937 /* Day33.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day33.swift; sourceTree = "<group>"; };
 		694549D22AA229C400680365 /* AIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewModel.swift; sourceTree = "<group>"; };
 		694549D52AA22EC300680365 /* XIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIndicatorView.swift; sourceTree = "<group>"; };
-		694549D72AA22ED300680365 /* YIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YIndicatorView.swift; sourceTree = "<group>"; };
+		694549D72AA22ED300680365 /* AIOIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIOIndicatorView.swift; sourceTree = "<group>"; };
 		694549DC2AA22F6200680365 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		694549DF2AA4A70D00680365 /* AgainstGameplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgainstGameplayView.swift; sourceTree = "<group>"; };
+		694549E12AA5E56000680365 /* AgainstViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgainstViewModel.swift; sourceTree = "<group>"; };
+		694549E32AA5E88800680365 /* AOIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOIndicatorView.swift; sourceTree = "<group>"; };
 		69557C772A4D5ED200D10D08 /* Day25.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day25.swift; sourceTree = "<group>"; };
 		69557C7B2A4F2D5200D10D08 /* Day26.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day26.swift; sourceTree = "<group>"; };
 		69557C7F2A5000F300D10D08 /* Day27.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day27.swift; sourceTree = "<group>"; };
@@ -410,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				694549D22AA229C400680365 /* AIViewModel.swift */,
+				694549E12AA5E56000680365 /* AgainstViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -429,7 +434,8 @@
 			isa = PBXGroup;
 			children = (
 				694549D52AA22EC300680365 /* XIndicatorView.swift */,
-				694549D72AA22ED300680365 /* YIndicatorView.swift */,
+				694549D72AA22ED300680365 /* AIOIndicatorView.swift */,
+				694549E32AA5E88800680365 /* AOIndicatorView.swift */,
 			);
 			path = Indicators;
 			sourceTree = "<group>";
@@ -725,6 +731,7 @@
 				697112142A7F9A8E000BDDA6 /* Day63.swift in Sources */,
 				694549DD2AA22F6200680365 /* Move.swift in Sources */,
 				695A32042A72D10300A9F682 /* Day53.swift in Sources */,
+				694549E42AA5E88800680365 /* AOIndicatorView.swift in Sources */,
 				69093A7C2A4C37CA00B6AEEC /* Day24.swift in Sources */,
 				69D153DE2A2D1F00002A1A46 /* DaysOfSwiftUIView.swift in Sources */,
 				69DCD2EF2A420C3600CAF9FE /* Day16.swift in Sources */,
@@ -777,7 +784,7 @@
 				697EBB942A55D9BD0080174E /* Day31.swift in Sources */,
 				694549D62AA22EC300680365 /* XIndicatorView.swift in Sources */,
 				694549D32AA229C400680365 /* AIViewModel.swift in Sources */,
-				694549D82AA22ED300680365 /* YIndicatorView.swift in Sources */,
+				694549D82AA22ED300680365 /* AIOIndicatorView.swift in Sources */,
 				69DCD2F12A42E71700CAF9FE /* Day17.swift in Sources */,
 				692EF4A12A93F9BF00C3A4C0 /* AgainstMode.swift in Sources */,
 				69D154072A2E330F002A1A46 /* Day1.swift in Sources */,
@@ -790,6 +797,7 @@
 				697D41C62A4851E900EFE54F /* Day21.swift in Sources */,
 				693ADC0B2A5AB86400CCA773 /* Day35.swift in Sources */,
 				69557C782A4D5ED200D10D08 /* Day25.swift in Sources */,
+				694549E22AA5E56000680365 /* AgainstViewModel.swift in Sources */,
 				6918D42A2A795CD000007D80 /* Day58.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

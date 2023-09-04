@@ -31,7 +31,7 @@ final class AIViewModel: ObservableObject{
         aiTurn = true
         humanTurn = false
         if(isSquareOccupied(in: moves, forIndex: position)) {return}
-        moves[position] = Move(player: .human, boardIndex: position)
+        moves[position] = Move(player: .firstPlayer, boardIndex: position)
         
         print("\(currentRound) of \(roundSelectedOption)")
         print(humanScore)
@@ -39,7 +39,7 @@ final class AIViewModel: ObservableObject{
         
         // Win / Draw Condition
         
-        if checkWinCondition(for: .human, in: moves){
+        if checkWinCondition(for: .firstPlayer, in: moves){
             if(roundSelectedOption == currentRound){
                 if(humanScore > aiScore){
                     alertItem = AlertContext.humanWin
@@ -162,7 +162,7 @@ final class AIViewModel: ObservableObject{
         }
         
         //Medium Mode
-        let humanMoves = moves.compactMap{$0}.filter{ $0.player == .human} // Removing nil from array and keep the player's move array's index
+        let humanMoves = moves.compactMap{$0}.filter{ $0.player == .firstPlayer} // Removing nil from array and keep the player's move array's index
         let humanPosition = Set(humanMoves.map{$0.boardIndex}) // Give me the board indexed from player's array
         
         for pattern in winPatterns {
