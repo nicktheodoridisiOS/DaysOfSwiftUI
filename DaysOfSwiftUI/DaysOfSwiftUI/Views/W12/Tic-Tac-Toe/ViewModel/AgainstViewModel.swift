@@ -13,12 +13,36 @@ final class AgainstViewModel: ObservableObject{
     
     @Published var amoves: [Move?] = Array(repeating: nil, count: 9)
     @Published var firstPlayerTurn: Bool  = true
+    @Published var alertItem: AlertItem?
     
     let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
+    
+    func gameProcess(for position: Int , roundSelectedOption: Int){
+        
+        if isSquareOccupied(in: amoves, forIndex: position) {return}
+        amoves[position] = Move(player: firstPlayerTurn ? .firstPlayer : .secondPlayer, boardIndex: position)
+        
+        
+        if checkWinCondition(for: .firstPlayer, in: amoves){
+            alertItem = AlertContext.firstPlayerWin
+            
+        }
+        
+        if checkWinCondition(for: .secondPlayer, in: amoves){
+            alertItem = AlertContext.secondPlayerWin
+            
+        }
+        
+        if(checkForDraw(in: amoves)){
+            alertItem = AlertContext.draw
+        }
+        
+        firstPlayerTurn.toggle()
+    }
     
     func isSquareOccupied(in moves: [Move?], forIndex index: Int ) -> Bool{
         return moves.contains(where: {$0?.boardIndex == index})
@@ -38,6 +62,10 @@ final class AgainstViewModel: ObservableObject{
     
     func checkForDraw(in moves: [Move?]) -> Bool {
         return moves.compactMap{$0}.count == 9
+    }
+    
+    func resetGame(){
+        amoves = Array(repeating: nil, count: 9)
     }
     
 }

@@ -25,28 +25,7 @@ struct AgainstGameplayView: View {
                             againstViewModel.amoves[i]?.indicator
                         }
                         .onTapGesture {
-                            if againstViewModel.isSquareOccupied(in: againstViewModel.amoves, forIndex: i) {return}
-                            
-                            againstViewModel.amoves[i] = Move(player: againstViewModel.firstPlayerTurn ? .firstPlayer : .secondPlayer, boardIndex: i)
-                            
-                                
-                            if againstViewModel.checkWinCondition(for: .firstPlayer, in: againstViewModel.amoves){
-                                print("First Player Win")
-                                
-                            }
-                            
-                            if againstViewModel.checkWinCondition(for: .secondPlayer, in: againstViewModel.amoves){
-                                print("Second Player Win")
-                                
-                            }
-                            
-                            if(againstViewModel.checkForDraw(in: againstViewModel.amoves)){
-                                print("Draw")
-                                
-                            }
-                            
-                            
-                            againstViewModel.firstPlayerTurn.toggle()
+                            againstViewModel.gameProcess(for: i, roundSelectedOption: 1)
                         }
                     }
                 }
@@ -54,6 +33,11 @@ struct AgainstGameplayView: View {
             }
             .padding()
             .padding(.horizontal,50)
+            .alert(item: $againstViewModel.alertItem, content: { alertItem in
+                Alert(title: alertItem.title ,
+                      message: alertItem.message ,
+                      dismissButton: .default(alertItem.buttonTitle,action: {againstViewModel.resetGame()}))
+            })
         }
     }
 }
