@@ -11,7 +11,7 @@ struct AIGameplayView: View {
     
     @StateObject private var aiViewModel = AIViewModel()
     
-    @Binding var aiTfName: String
+    @Binding var firstNamePlayerTf: String
     @Binding var roundSelectedOption: Int
     
     //Animation Stater
@@ -34,7 +34,7 @@ struct AIGameplayView: View {
                                             Image(systemName: "person.fill")
                                                 .font(.largeTitle)
                                                 .foregroundColor(aiViewModel.humanTurn ? .accentColor : .gray.opacity(0.1))
-                                            Text(aiTfName)
+                                            Text(firstNamePlayerTf)
                                                 .truncationMode(.tail)
                                                 .fontWeight(.semibold)
                                                 .foregroundColor(aiViewModel.humanTurn ? .accentColor : .gray.opacity(0.1))
@@ -85,7 +85,6 @@ struct AIGameplayView: View {
                             }
                     }
                 }
-                
                 Spacer()
                 LazyVGrid(columns: aiViewModel.columns,spacing: 10 ){
                     ForEach(0..<9){ i in
@@ -128,6 +127,6 @@ struct AIGameplayView: View {
 
 struct AIGameplayView_Previews: PreviewProvider {
     static var previews: some View {
-        AIGameplayView(aiTfName: .constant(""),roundSelectedOption: .constant(0))
+        AIGameplayView(firstNamePlayerTf: .constant(""),roundSelectedOption: .constant(0))
     }
 }

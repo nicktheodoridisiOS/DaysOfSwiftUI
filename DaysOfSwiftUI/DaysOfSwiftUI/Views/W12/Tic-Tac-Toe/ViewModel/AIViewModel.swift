@@ -40,6 +40,7 @@ final class AIViewModel: ObservableObject{
         // Win / Draw Condition
         
         if checkWinCondition(for: .firstPlayer, in: moves){
+            humanScore = humanScore + 1
             if(roundSelectedOption == currentRound){
                 if(humanScore > aiScore){
                     alertItem = AlertContext.humanWin
@@ -57,7 +58,6 @@ final class AIViewModel: ObservableObject{
                     return
                 }
             }
-            humanScore = humanScore + 1
             currentRound = currentRound + 1
             alertItem = AlertContext.humanRound
             return
@@ -99,6 +99,7 @@ final class AIViewModel: ObservableObject{
             if checkWinCondition(for: .ai, in: moves){
                 
                 if(roundSelectedOption == currentRound){
+                    aiScore = aiScore + 1
                     if(humanScore > aiScore){
                         alertItem = AlertContext.humanWin
                         resetScore()
@@ -115,7 +116,6 @@ final class AIViewModel: ObservableObject{
                         return
                     }
                 }
-                aiScore = aiScore + 1
                 currentRound = currentRound + 1
                 alertItem = AlertContext.aiRound
                 return
@@ -211,7 +211,6 @@ final class AIViewModel: ObservableObject{
     
     func resetGame(){
         moves = Array(repeating: nil, count: 9)
-        humanTurn.toggle()
-        aiTurn.toggle()
+    
     }
 }

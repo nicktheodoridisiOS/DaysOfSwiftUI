@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AIView: View {
     
-    @Binding var aiTfName: String
+    @Binding var firstNamePlayerTf: String
     @Binding var roundSelectedOption: Int
     
     var body: some View {
@@ -33,7 +33,7 @@ struct AIView: View {
                     .padding(.horizontal)
                     
                     Spacer()
-                    NavigationLink(destination: AIGameplayView(aiTfName: $aiTfName,roundSelectedOption: $roundSelectedOption), label: {
+                    NavigationLink(destination: AIGameplayView(firstNamePlayerTf: $firstNamePlayerTf,roundSelectedOption: $roundSelectedOption), label: {
                         HStack{
                             Image(systemName: "poweroutlet.type.f.fill")
                             Text("Play Against AI")
@@ -60,6 +60,6 @@ struct AIView: View {
 
 struct AIView_Previews: PreviewProvider {
     static var previews: some View {
-        AIView(aiTfName: .constant(""),roundSelectedOption: .constant(0))
+        AIView(firstNamePlayerTf: .constant(""),roundSelectedOption: .constant(0))
     }
 }

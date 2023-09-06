@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @Binding var aiTfName: String
+    @Binding var firtPlayerNameTf: String
     @Binding var roundSelectedOption: Int
     
     @AppStorage("isDarkModeEnabled") private var isDarkModeEnabled = false
@@ -30,7 +30,7 @@ struct SettingsView: View {
                                     .foregroundColor(.white)
                             }
                             
-                            TextField(aiTfName,text: $aiTfName)
+                            TextField(firtPlayerNameTf,text: $firtPlayerNameTf)
                         }
                     }
                     
@@ -77,6 +77,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(aiTfName: .constant(""),roundSelectedOption: .constant(0))
+        SettingsView(firtPlayerNameTf: .constant(""),roundSelectedOption: .constant(0))
     }
 }

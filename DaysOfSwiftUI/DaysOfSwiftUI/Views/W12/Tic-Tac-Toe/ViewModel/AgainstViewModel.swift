@@ -13,7 +13,12 @@ final class AgainstViewModel: ObservableObject{
     
     @Published var amoves: [Move?] = Array(repeating: nil, count: 9)
     @Published var firstPlayerTurn: Bool  = true
+    @Published var secondPlayerTurn: Bool  = false
     @Published var alertItem: AlertItem?
+    
+    @Published var currentRound = 0
+    @Published var firstPlayerScore = 0
+    @Published var secondPlayerScore = 0
     
     let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -28,20 +33,67 @@ final class AgainstViewModel: ObservableObject{
         
         
         if checkWinCondition(for: .firstPlayer, in: amoves){
-            alertItem = AlertContext.firstPlayerWin
-            
+            firstPlayerScore = firstPlayerScore + 1
+            if(roundSelectedOption == currentRound){
+                if(firstPlayerScore > secondPlayerScore){
+                    alertItem = AlertContext.firstPlayerWin
+                    resetScore()
+                    return
+                }
+                else if(firstPlayerScore < secondPlayerScore){
+                    alertItem = AlertContext.secondPlayerWin
+                    resetScore()
+                    return
+                }
+                else{
+                    alertItem = AlertContext.draw
+                    resetScore()
+                    return
+                }
+            }
+            currentRound = currentRound + 1
+            alertItem = AlertContext.firstPlayerRound
+            return
         }
         
         if checkWinCondition(for: .secondPlayer, in: amoves){
-            alertItem = AlertContext.secondPlayerWin
+            secondPlayerScore = secondPlayerScore + 1
+            if(roundSelectedOption == currentRound){
+                if(firstPlayerScore < secondPlayerScore){
+                    alertItem = AlertContext.secondPlayerWin
+                    resetScore()
+                    return
+                }
+                else if(firstPlayerScore > secondPlayerScore){
+                    alertItem = AlertContext.firstPlayerWin
+                    resetScore()
+                    return
+                }
+                else{
+                    alertItem = AlertContext.draw
+                    resetScore()
+                    return
+                }
+            }
+            currentRound = currentRound + 1
+            alertItem = AlertContext.secondPlayerRound
+            return
             
         }
         
         if(checkForDraw(in: amoves)){
-            alertItem = AlertContext.draw
+            if(roundSelectedOption == currentRound){
+                    alertItem = AlertContext.draw
+                    resetScore()
+                    return
+            }
+            currentRound = currentRound + 1
+            alertItem = AlertContext.drawRound
+            return
         }
         
         firstPlayerTurn.toggle()
+        secondPlayerTurn.toggle()
     }
     
     func isSquareOccupied(in moves: [Move?], forIndex index: Int ) -> Bool{
@@ -67,5 +119,13 @@ final class AgainstViewModel: ObservableObject{
     func resetGame(){
         amoves = Array(repeating: nil, count: 9)
     }
+    
+    
+    func resetScore(){
+        firstPlayerScore = 0
+        secondPlayerScore = 0
+        currentRound = 0
+    }
+    
     
 }

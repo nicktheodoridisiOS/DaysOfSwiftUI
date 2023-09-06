@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AgainstMode: View {
+    
+    @Binding var firstNamePlayerTf: String
+    
     var body: some View {
         NavigationStack{
             ScrollView(showsIndicators: false){
@@ -29,7 +32,7 @@ struct AgainstMode: View {
                     .padding(.horizontal)
                     
                     Spacer()
-                    NavigationLink(destination: AgainstGameplayView(), label: {
+                    NavigationLink(destination: AgainstGameplayView(firstNamePlayerTf: $firstNamePlayerTf), label: {
                         HStack{
                             Image(systemName: "person.2.fill")
                             Text("Play Against")
@@ -55,6 +58,6 @@ struct AgainstMode: View {
 
 struct MultiplayerView_Previews: PreviewProvider {
     static var previews: some View {
-        AgainstMode()
+        AgainstMode(firstNamePlayerTf: .constant(""))
     }
 }

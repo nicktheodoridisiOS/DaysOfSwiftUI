@@ -8,12 +8,82 @@
 import SwiftUI
 
 struct AgainstGameplayView: View {
+    
     @StateObject private var againstViewModel = AgainstViewModel()
     
+    @Binding var firstNamePlayerTf: String
+    
+    @State private var roundSelectedOption: Int = 2
     
     var body: some View {
         GeometryReader{ geometry in
             VStack{
+                HStack(spacing:0){
+                    VStack{
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(againstViewModel.firstPlayerTurn ? .accentColor.opacity(0.15) : .gray.opacity(0.1))
+                            .frame(width: 70,height:100)
+                            .overlay{
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(againstViewModel.firstPlayerTurn ? Color.accentColor : .gray.opacity(0.1))
+                                    .frame(width: 70,height: 100)
+                                    .overlay{
+                                        VStack(spacing: 10){
+                                            Image(systemName: "person.fill")
+                                                .font(.largeTitle)
+                                                .foregroundColor(againstViewModel.firstPlayerTurn ? .accentColor : .gray.opacity(0.1))
+                                            Text(firstNamePlayerTf)
+                                                .truncationMode(.tail)
+                                                .fontWeight(.semibold)
+                                                .foregroundColor(againstViewModel.firstPlayerTurn ? .accentColor : .gray.opacity(0.1))
+                                                .padding(.horizontal)
+                                        }
+                                    }
+                            }
+                    }
+                    VStack(spacing: 15){
+                        Text("\(againstViewModel.firstPlayerScore) : \(againstViewModel.secondPlayerScore)")
+                            .fontWeight(.semibold)
+                            .font(.largeTitle)
+                        Text(againstViewModel.currentRound == roundSelectedOption ? "Last Round":"Round \(againstViewModel.currentRound + 1)")
+                            .foregroundColor(againstViewModel.currentRound == roundSelectedOption ? .red.opacity(0.5) : .secondary.opacity(0.5))
+                            .font(.system(size: againstViewModel.currentRound == roundSelectedOption ? 8 : 11))
+                            .background{
+                                RoundedRectangle(cornerRadius: 5)
+                                    .foregroundColor(againstViewModel.currentRound == roundSelectedOption ? .red.opacity(0.2) : .secondary.opacity(0.2))
+                                    .frame(width: 55,height:20)
+                                    .overlay{
+                                        RoundedRectangle(cornerRadius: 5)
+                                            .stroke(againstViewModel.currentRound == roundSelectedOption ? .red.opacity(0.5) : .secondary.opacity(0.5))
+                                            .frame(width: 55,height:20)
+                                    }
+                            }
+                        
+                    }
+                    .padding(.horizontal,25)
+                    
+                    VStack{
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(againstViewModel.secondPlayerTurn ? .red.opacity(0.15) : .gray.opacity(0.1))
+                            .frame(width: 70,height:100)
+                            .overlay{
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(againstViewModel.secondPlayerTurn ? .red: .gray.opacity(0.1))
+                                    .frame(width: 70,height: 100)
+                                    .overlay{
+                                        VStack(spacing: 10){
+                                            Image(systemName: "person.fill")
+                                                .font(.largeTitle)
+                                                .foregroundColor(againstViewModel.secondPlayerTurn ? .red : .gray.opacity(0.1))
+                                            Text("Player")
+                                                .fontWeight(.semibold)
+                                                .foregroundColor(againstViewModel.secondPlayerTurn ? .red : .gray.opacity(0.1))
+                                        }
+                                    }
+                            }
+                    }
+                }
+                
                 Spacer()
                 LazyVGrid(columns: againstViewModel.columns,spacing: 10 ){
                     ForEach(0..<9){ i in
@@ -39,11 +109,12 @@ struct AgainstGameplayView: View {
                       dismissButton: .default(alertItem.buttonTitle,action: {againstViewModel.resetGame()}))
             })
         }
+        
     }
-}
-
-struct AgainstGameplayView_Previews: PreviewProvider {
-    static var previews: some View {
-        AgainstGameplayView()
+    
+    struct AgainstGameplayView_Previews: PreviewProvider {
+        static var previews: some View {
+            AgainstGameplayView(firstNamePlayerTf: .constant(""))
+        }
     }
 }

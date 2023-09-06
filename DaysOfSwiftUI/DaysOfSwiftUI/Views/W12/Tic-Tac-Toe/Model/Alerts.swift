@@ -48,4 +48,12 @@ struct AlertContext{
                                            message: Text("Second player won! 🎉 What an impressive victory!"),
                                            buttonTitle: Text("Play Again"))
     
+    static let firstPlayerRound = AlertItem(title:Text("Round For First Player"),
+                             message: Text(""),
+                             buttonTitle: Text("Next Round"))
+    
+    static let secondPlayerRound = AlertItem(title:Text("Round For First Player"),
+                             message: Text(""),
+                             buttonTitle: Text("Next Round"))
+    
 }
