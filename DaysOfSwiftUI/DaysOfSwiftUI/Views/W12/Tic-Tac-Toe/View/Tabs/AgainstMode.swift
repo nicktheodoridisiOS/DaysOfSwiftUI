@@ -10,6 +10,10 @@ import SwiftUI
 struct AgainstMode: View {
     
     @Binding var firstNamePlayerTf: String
+    @Binding var secondNamePlayerTf: String
+    
+    @Binding var roundSelectedOption: Int
+    
     
     var body: some View {
         NavigationStack{
@@ -32,7 +36,10 @@ struct AgainstMode: View {
                     .padding(.horizontal)
                     
                     Spacer()
-                    NavigationLink(destination: AgainstGameplayView(firstNamePlayerTf: $firstNamePlayerTf), label: {
+                    NavigationLink(destination: AgainstGameplayView(
+                        firstNamePlayerTf: $firstNamePlayerTf,
+                        secondNamePlayerTf: $secondNamePlayerTf,
+                        roundSelectedOption: $roundSelectedOption), label: {
                         HStack{
                             Image(systemName: "person.2.fill")
                             Text("Play Against")
@@ -58,6 +65,6 @@ struct AgainstMode: View {
 
 struct MultiplayerView_Previews: PreviewProvider {
     static var previews: some View {
-        AgainstMode(firstNamePlayerTf: .constant(""))
+        AgainstMode(firstNamePlayerTf: .constant(""), secondNamePlayerTf: .constant(""), roundSelectedOption: .constant(0))
     }
 }

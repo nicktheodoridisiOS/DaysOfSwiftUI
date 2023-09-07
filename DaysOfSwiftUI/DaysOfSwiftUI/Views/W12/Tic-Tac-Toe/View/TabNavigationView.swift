@@ -10,8 +10,12 @@ import SwiftUI
 struct TabNavigationView: View {
     
     @AppStorage("aiTfName") private var firstNamePlayerTf = "You"
+    @AppStorage("secondNamePlayerTf") private var secondNamePlayerTf = "Player"
     @AppStorage("roundSelectedOption") private var roundSelectedOption = 0
+    @AppStorage("roundAgainstSelectedOption") private var roundAgainstSelectedOption = 0
     @AppStorage("isDarkModeEnabled") private var isDarkModeEnabled = false
+    
+    
     
     var body: some View {
         TabView{
@@ -25,12 +29,12 @@ struct TabNavigationView: View {
                     Image(systemName: "poweroutlet.type.f.fill")
                     Text("AI")
                 }
-            AgainstMode(firstNamePlayerTf: $firstNamePlayerTf)
+            AgainstMode(firstNamePlayerTf: $firstNamePlayerTf, secondNamePlayerTf: $secondNamePlayerTf, roundSelectedOption: $roundAgainstSelectedOption)
                 .tabItem(){
                     Image(systemName: "person.2.fill")
                     Text("Against")
                 }
-            SettingsView(firtPlayerNameTf: $firstNamePlayerTf , roundSelectedOption: $roundSelectedOption)
+            SettingsView(firtPlayerNameTf: $firstNamePlayerTf,secondPlayerNameTf: $secondNamePlayerTf , roundSelectedOption: $roundSelectedOption,roundAgainstSelectedOption: $roundAgainstSelectedOption)
                 .tabItem(){
                     Image(systemName: "gear")
                     Text("Settings")

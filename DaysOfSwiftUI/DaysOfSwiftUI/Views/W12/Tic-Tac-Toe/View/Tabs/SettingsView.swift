@@ -11,7 +11,9 @@ import SwiftUI
 struct SettingsView: View {
     
     @Binding var firtPlayerNameTf: String
+    @Binding var secondPlayerNameTf: String
     @Binding var roundSelectedOption: Int
+    @Binding var roundAgainstSelectedOption: Int
     
     @AppStorage("isDarkModeEnabled") private var isDarkModeEnabled = false
     
@@ -32,9 +34,22 @@ struct SettingsView: View {
                             
                             TextField(firtPlayerNameTf,text: $firtPlayerNameTf)
                         }
+                        
+                        HStack{
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 7)
+                                    .frame(width: 30,height: 30)
+                                    .foregroundColor(.red)
+                                Image(systemName: "person.fill")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                            }
+                            
+                            TextField(secondPlayerNameTf,text: $secondPlayerNameTf)
+                        }
                     }
                     
-                    Section(header: Text("GAMEPLAY")){
+                    Section(header: Text("AI MODE")){
                         HStack{
                             ZStack{
                                 RoundedRectangle(cornerRadius: 7)
@@ -44,7 +59,25 @@ struct SettingsView: View {
                                     .fontWeight(.semibold)
                                     .foregroundColor(.white)
                             }
-                            Picker("AI Rounds", selection: $roundSelectedOption) {
+                            Picker("Rounds", selection: $roundSelectedOption) {
+                                ForEach(1..<11) { round in
+                                    Text("\(round)")
+                                }
+                            }
+                        }
+                    }
+                    
+                    Section(header: Text("AGAINST MODE")){
+                        HStack{
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 7)
+                                    .frame(width: 30,height: 30)
+                                    .foregroundColor(.red)
+                                Image(systemName: "person.2.fill")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                            }
+                            Picker("Rounds", selection: $roundAgainstSelectedOption) {
                                 ForEach(1..<11) { round in
                                     Text("\(round)")
                                 }
@@ -77,6 +110,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(firtPlayerNameTf: .constant(""),roundSelectedOption: .constant(0))
+        SettingsView(firtPlayerNameTf: .constant(""), secondPlayerNameTf: .constant(""), roundSelectedOption: .constant(0), roundAgainstSelectedOption: .constant(0))
     }
 }

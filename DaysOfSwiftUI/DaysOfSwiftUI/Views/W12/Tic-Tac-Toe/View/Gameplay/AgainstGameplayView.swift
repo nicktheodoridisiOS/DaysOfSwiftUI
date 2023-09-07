@@ -12,8 +12,9 @@ struct AgainstGameplayView: View {
     @StateObject private var againstViewModel = AgainstViewModel()
     
     @Binding var firstNamePlayerTf: String
+    @Binding var secondNamePlayerTf: String
     
-    @State private var roundSelectedOption: Int = 2
+    @Binding var roundSelectedOption: Int
     
     var body: some View {
         GeometryReader{ geometry in
@@ -75,7 +76,7 @@ struct AgainstGameplayView: View {
                                             Image(systemName: "person.fill")
                                                 .font(.largeTitle)
                                                 .foregroundColor(againstViewModel.secondPlayerTurn ? .red : .gray.opacity(0.1))
-                                            Text("Player")
+                                            Text(secondNamePlayerTf)
                                                 .fontWeight(.semibold)
                                                 .foregroundColor(againstViewModel.secondPlayerTurn ? .red : .gray.opacity(0.1))
                                         }
@@ -95,7 +96,7 @@ struct AgainstGameplayView: View {
                             againstViewModel.amoves[i]?.indicator
                         }
                         .onTapGesture {
-                            againstViewModel.gameProcess(for: i, roundSelectedOption: 1)
+                            againstViewModel.gameProcess(for: i, roundSelectedOption: roundSelectedOption)
                         }
                     }
                 }
@@ -114,7 +115,7 @@ struct AgainstGameplayView: View {
     
     struct AgainstGameplayView_Previews: PreviewProvider {
         static var previews: some View {
-            AgainstGameplayView(firstNamePlayerTf: .constant(""))
+            AgainstGameplayView(firstNamePlayerTf: .constant(""), secondNamePlayerTf: .constant(""), roundSelectedOption: .constant(0))
         }
     }
 }
