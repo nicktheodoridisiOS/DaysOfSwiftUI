@@ -23,42 +23,67 @@ struct SettingsView: View {
                 List{
                     Section(header: Text("PREFERENCES")){
                         HStack{
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 7)
-                                    .frame(width: 30,height: 30)
-                                    .foregroundColor(.accentColor)
-                                Image(systemName: "person.fill")
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.white)
-                            }
+                            Image(systemName: "person")
+                                .font(.title3)
+                                .overlay{
+                                    LinearGradient(
+                                        gradient: Gradient(colors:[
+                                            .cyan.opacity(1),
+                                            .blue]),
+                                        startPoint:
+                                                .topTrailing,
+                                        endPoint:
+                                            .bottomLeading)
+                                }
+                                .mask{
+                                    Image(systemName: "person")
+                                        .font(.title3)
+                                }
                             
                             TextField(firtPlayerNameTf,text: $firtPlayerNameTf)
+
                         }
                         
                         HStack{
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 7)
-                                    .frame(width: 30,height: 30)
-                                    .foregroundColor(.red)
-                                Image(systemName: "person.fill")
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.white)
-                            }
-                            
+                            Image(systemName: "person")
+                                .font(.title3)
+                                .overlay{
+                                    LinearGradient(
+                                        gradient: Gradient(colors:[
+                                            .yellow.opacity(1),
+                                            .red]),
+                                        startPoint:
+                                                .topTrailing,
+                                        endPoint:
+                                            .bottomLeading)
+                                }
+                                .mask{
+                                    Image(systemName: "person")
+                                        .font(.title3)
+                                }
                             TextField(secondPlayerNameTf,text: $secondPlayerNameTf)
                         }
                     }
                     
                     Section(header: Text("AI MODE")){
                         HStack{
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 7)
-                                    .frame(width: 30,height: 30)
-                                    .foregroundColor(.yellow)
-                                Image(systemName: "poweroutlet.type.f.fill")
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.white)
-                            }
+                            Image(systemName: "poweroutlet.type.f")
+                                .font(.title3)
+                                .overlay{
+                                    LinearGradient(
+                                        gradient: Gradient(colors:[
+                                            .yellow.opacity(1),
+                                            .orange]),
+                                        startPoint:
+                                                .topTrailing,
+                                        endPoint:
+                                            .bottomLeading)
+                                }
+                                .mask{
+                                    Image(systemName: "poweroutlet.type.f")
+                                        .font(.title3)
+                                }
+                            
                             Picker("Rounds", selection: $roundSelectedOption) {
                                 ForEach(1..<11) { round in
                                     Text("\(round)")
@@ -69,14 +94,23 @@ struct SettingsView: View {
                     
                     Section(header: Text("AGAINST MODE")){
                         HStack{
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 7)
-                                    .frame(width: 30,height: 30)
-                                    .foregroundColor(.red)
-                                Image(systemName: "person.2.fill")
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.white)
-                            }
+                            Image(systemName: "person.2")
+                                .font(.title3)
+                                .overlay{
+                                    LinearGradient(
+                                        gradient: Gradient(colors:[
+                                            .yellow.opacity(1),
+                                            .red]),
+                                        startPoint:
+                                                .topTrailing,
+                                        endPoint:
+                                            .bottomLeading)
+                                }
+                                .mask{
+                                    Image(systemName: "person.2")
+                                        .font(.title3)
+                                }
+                            
                             Picker("Rounds", selection: $roundAgainstSelectedOption) {
                                 ForEach(1..<11) { round in
                                     Text("\(round)")
@@ -87,14 +121,22 @@ struct SettingsView: View {
                     
                     Section(header: Text("DISPLAY"),footer: Text("Enabling dark mode is going to change the entire appearance of the application, beyond your device's general settings. ")){
                         HStack{
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 7)
-                                    .frame(width: 30,height: 30)
-                                    .foregroundColor(.purple)
-                                Image(systemName: "moon.fill")
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.white)
-                            }
+                            Image(systemName: "moon")
+                                .font(.title3)
+                                .overlay{
+                                    LinearGradient(
+                                        gradient: Gradient(colors:[
+                                            .pink.opacity(1),
+                                            .purple]),
+                                        startPoint:
+                                                .topTrailing,
+                                        endPoint:
+                                            .bottomLeading)
+                                }
+                                .mask{
+                                    Image(systemName: "moon")
+                                        .font(.title3)
+                                }
                             Toggle("Dark Mode" , isOn: $isDarkModeEnabled)
                         }
                     }
