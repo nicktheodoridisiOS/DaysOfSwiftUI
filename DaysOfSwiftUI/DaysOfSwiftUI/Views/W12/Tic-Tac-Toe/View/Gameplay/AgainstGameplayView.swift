@@ -19,6 +19,7 @@ struct AgainstGameplayView: View {
     var body: some View {
         GeometryReader{ geometry in
             VStack{
+                Spacer()
                 HStack(spacing:0){
                     VStack{
                         RoundedRectangle(cornerRadius: 10)
@@ -62,7 +63,6 @@ struct AgainstGameplayView: View {
                         
                     }
                     .padding(.horizontal,25)
-                    
                     VStack{
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundColor(againstViewModel.secondPlayerTurn ? .red.opacity(0.15) : .gray.opacity(0.1))
@@ -84,7 +84,6 @@ struct AgainstGameplayView: View {
                             }
                     }
                 }
-                
                 Spacer()
                 LazyVGrid(columns: againstViewModel.columns,spacing: 10 ){
                     ForEach(0..<9){ i in

@@ -29,7 +29,7 @@ struct TabNavigationView: View {
                     Image(systemName: "poweroutlet.type.f.fill")
                     Text("AI")
                 }
-            AgainstMode(firstNamePlayerTf: $firstNamePlayerTf, secondNamePlayerTf: $secondNamePlayerTf, roundSelectedOption: $roundAgainstSelectedOption)
+            AgainstMode(firstNamePlayerTf: $firstNamePlayerTf, secondNamePlayerTf: $secondNamePlayerTf, roundSelectedOption: $roundAgainstSelectedOption,isDarkModeEnabled: $isDarkModeEnabled)
                 .tabItem(){
                     Image(systemName: "person.2.fill")
                     Text("Against")
