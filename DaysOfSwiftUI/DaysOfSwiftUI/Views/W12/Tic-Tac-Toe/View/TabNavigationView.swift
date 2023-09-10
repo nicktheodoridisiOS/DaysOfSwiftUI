@@ -24,7 +24,7 @@ struct TabNavigationView: View {
                     Image(systemName: "star.fill")
                     Text("Discover")
                 }
-            AIView(firstNamePlayerTf: $firstNamePlayerTf , roundSelectedOption: $roundSelectedOption)
+            AIView(firstNamePlayerTf: $firstNamePlayerTf , roundSelectedOption: $roundSelectedOption,isDarkModeEnabled: $isDarkModeEnabled)
                 .tabItem(){
                     Image(systemName: "poweroutlet.type.f.fill")
                     Text("AI")

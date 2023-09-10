@@ -97,9 +97,8 @@ final class AIViewModel: ObservableObject{
             
             
             if checkWinCondition(for: .ai, in: moves){
-                
+                aiScore = aiScore + 1
                 if(roundSelectedOption == currentRound){
-                    aiScore = aiScore + 1
                     if(humanScore > aiScore){
                         alertItem = AlertContext.humanWin
                         resetScore()

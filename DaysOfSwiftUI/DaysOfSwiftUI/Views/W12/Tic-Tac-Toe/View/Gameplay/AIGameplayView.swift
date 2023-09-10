@@ -20,6 +20,7 @@ struct AIGameplayView: View {
     var body: some View {
         GeometryReader{ geometry in
             VStack{
+                Spacer()
                 HStack(spacing:0){
                     VStack{
                         RoundedRectangle(cornerRadius: 10)
@@ -48,15 +49,15 @@ struct AIGameplayView: View {
                             .fontWeight(.semibold)
                             .font(.largeTitle)
                         Text(aiViewModel.currentRound == roundSelectedOption ? "Last Round":"Round \(aiViewModel.currentRound + 1)")
-                            .foregroundColor(aiViewModel.currentRound == roundSelectedOption ? .red.opacity(0.5) : .secondary.opacity(0.5))
+                            .foregroundColor(aiViewModel.currentRound == roundSelectedOption ? .yellow.opacity(0.5) : .secondary.opacity(0.5))
                             .font(.system(size: aiViewModel.currentRound == roundSelectedOption ? 8 : 11))
                             .background{
                                 RoundedRectangle(cornerRadius: 5)
-                                    .foregroundColor(aiViewModel.currentRound == roundSelectedOption ? .red.opacity(0.2) : .secondary.opacity(0.2))
+                                    .foregroundColor(aiViewModel.currentRound == roundSelectedOption ? .yellow.opacity(0.2) : .secondary.opacity(0.2))
                                     .frame(width: 55,height:20)
                                     .overlay{
                                         RoundedRectangle(cornerRadius: 5)
-                                            .stroke(aiViewModel.currentRound == roundSelectedOption ? .red.opacity(0.5) : .secondary.opacity(0.5))
+                                            .stroke(aiViewModel.currentRound == roundSelectedOption ? .yellow.opacity(0.5) : .secondary.opacity(0.5))
                                             .frame(width: 55,height:20)
                                     }
                             }
