@@ -19,7 +19,7 @@ struct TabNavigationView: View {
     
     var body: some View {
         TabView{
-            DiscoverView()
+            DiscoverView(isDarkModeEnabled: $isDarkModeEnabled)
                 .tabItem(){
                     Image(systemName: "star.fill")
                     Text("Discover")

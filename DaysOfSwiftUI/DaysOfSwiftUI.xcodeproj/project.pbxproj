@@ -378,12 +378,12 @@
 			path = W6;
 			sourceTree = "<group>";
 		};
-		692EF4982A93DCB200C3A4C0 /* W12 */ = {
+		692EF4982A93DCB200C3A4C0 /* W12-W13-W14-W15 */ = {
 			isa = PBXGroup;
 			children = (
 				692EF4992A93DCD900C3A4C0 /* Tic-Tac-Toe */,
 			);
-			path = W12;
+			path = "W12-W13-W14-W15";
 			sourceTree = "<group>";
 		};
 		692EF4992A93DCD900C3A4C0 /* Tic-Tac-Toe */ = {
@@ -558,7 +558,7 @@
 		69D154052A2E32F8002A1A46 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				692EF4982A93DCB200C3A4C0 /* W12 */,
+				692EF4982A93DCB200C3A4C0 /* W12-W13-W14-W15 */,
 				6979AD322A8BA0D2002A411F /* W11 */,
 				6911607B2A83B7AA0088C378 /* W10 */,
 				6918D4262A794B7F00007D80 /* W9 */,

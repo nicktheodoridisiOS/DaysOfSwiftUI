@@ -52,7 +52,7 @@ struct AIView: View {
                                     .font(.headline)
                                     .fontWeight(.semibold)
                                     .foregroundColor(.yellow)
-                                Text("Artificial Intelligence (AI) is a field of computer science that deals with the design and development of systems capable of performing tasks that require human intelligence. The AI of this application (Tic Tac Toe) has been programmed to face any human intelligence. Are you capable of facing it?")
+                                Text("Artificial Intelligence (AI) is a field of computer science that deals with the design and development of systems capable of performing tasks that require human intelligence. The AI of this application (Tic-Tac-Toe) has been programmed to face any human intelligence. Are you capable of facing it?")
                                     .font(.system(size: 17))
                             }
                             .frame(maxWidth: .infinity,alignment:.topLeading)
