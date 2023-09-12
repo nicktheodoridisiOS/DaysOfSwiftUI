@@ -29,14 +29,14 @@ struct DiscoverView: View {
                                 .frame(height: 400)
                             
                             VStack(spacing: 10){
-                                Image(systemName: "star.fill")
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 70))
-                                
-                                Text("Tic-Tac-Toe")
-                                    .foregroundColor(.white)
-                                    .font(.title)
-                                    .fontWeight(.bold)
+                                VStack(spacing: 20){
+                                    Image("tttIconL")
+                                    
+                                    Text("Tic Tac Toe")
+                                        .foregroundColor(.white)
+                                        .font(.title)
+                                        .fontWeight(.bold)
+                                }
                                 
                                 Text("For changes to your preferences regarding the mode, you can go to the application settings.")
                                     .foregroundColor(.secondary)

@@ -21,7 +21,7 @@ struct TabNavigationView: View {
         TabView{
             DiscoverView(isDarkModeEnabled: $isDarkModeEnabled)
                 .tabItem(){
-                    Image(systemName: "star.fill")
+                    Image("tttIcon")
                     Text("Discover")
                 }
             AIView(firstNamePlayerTf: $firstNamePlayerTf , roundSelectedOption: $roundSelectedOption,isDarkModeEnabled: $isDarkModeEnabled)
