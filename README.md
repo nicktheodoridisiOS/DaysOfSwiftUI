@@ -1,6 +1,6 @@
 # 100 Days of SwiftUI
 
-<img width="1200" alt="githubposter" src="https://github.com/nicktheodoridisiOS/DaysOfSwiftUI/assets/122683142/7ca71a23-c647-4551-b436-9c9e434fad06">
+<img width="1200" alt="githubposter" src="https://github.com/nicktheodoridisiOS/DaysOfSwiftUI/assets/122683142/0a940f92-01e4-447e-a917-115f789f7ab1">
 
 Welcome to the "100 Days of SwiftUI" challenge! This project is an initiative to explore the SwiftUI framework in iOS development. It is designed to cover a significant portion of the SwiftUI framework and assist developers in building apps with the new iOS 17.
 
