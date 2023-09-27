@@ -5,12 +5,11 @@ import SwiftUI
 import MapKit
 
 struct Day8: View {
-    
-    @State private var mapRegion: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40.607641, longitude: 22.965325), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
-        
+    @State  private var cameraPosition: MapCameraPosition = .region(.myRegion)
+   
     var body: some View {
         ZStack{
-            Map(coordinateRegion: $mapRegion).ignoresSafeArea()
+            Map(position: $cameraPosition).ignoresSafeArea()
             Image("profile")
                 .resizable()
                 .frame(width: 40 , height: 40)
@@ -35,5 +34,17 @@ struct Day8: View {
 struct Day8_Previews: PreviewProvider {
     static var previews: some View {
         Day8()
+    }
+}
+
+extension CLLocationCoordinate2D{
+    static var myLocation: CLLocationCoordinate2D{
+        return .init(latitude: 40.607641, longitude: 22.965325)
+    }
+}
+
+extension MKCoordinateRegion{
+    static var myRegion: MKCoordinateRegion{
+        return .init(center: .myLocation , latitudinalMeters: 10000,longitudinalMeters: 10000)
     }
 }
