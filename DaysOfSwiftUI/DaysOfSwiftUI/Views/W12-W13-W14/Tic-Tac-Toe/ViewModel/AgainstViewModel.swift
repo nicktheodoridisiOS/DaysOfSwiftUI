@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 final class AgainstViewModel: ObservableObject{
     
     @Published var amoves: [Move?] = Array(repeating: nil, count: 9)

@@ -111,10 +111,10 @@ struct AgainstGameplayView: View {
         }
         
     }
-    
-    struct AgainstGameplayView_Previews: PreviewProvider {
-        static var previews: some View {
-            AgainstGameplayView(firstNamePlayerTf: .constant(""), secondNamePlayerTf: .constant(""), roundSelectedOption: .constant(0))
-        }
+}
+
+struct AgainstGameplayView_Previews: PreviewProvider {
+    static var previews: some View {
+        AgainstGameplayView(firstNamePlayerTf: .constant(""), secondNamePlayerTf: .constant(""), roundSelectedOption: .constant(0))
     }
 }
